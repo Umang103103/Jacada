@@ -30,7 +30,7 @@
   <body>
     <!--Topbar Section-->
     <header>
-      <div id="navbar" class="topbar d-flex align-items-center">
+      <div class="topbar d-flex align-items-center">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -95,12 +95,20 @@
           </div>
           <!-- MOBILE RIGHT SIDE (visible below md) -->
           <div class="mobile-icons d-flex d-md-none align-items-center">
-            <!-- Search Icon -->
+            <!-- SEARCH BUTTON (mobile only) -->
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
 
             <span class="menu-text">MENU</span>
-            <!-- MOBILE ONLY: HAMBURGER -->
+
+            <!-- HAMBURGER -->
             <button
-              data-mdb-button-init
               class="navbar-toggler first-button d-md-none"
               type="button"
               aria-label="Toggle navigation"
@@ -111,6 +119,7 @@
                 <span></span>
               </div>
             </button>
+
             <nav class="mobile-nav d-md-none" aria-hidden="true">
               <!-- MAIN MENU -->
               <div class="menu-panel active" data-panel="main">

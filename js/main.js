@@ -1,29 +1,3 @@
-/*navbar js*/
-var prevScrollpos = window.pageYOffset;
-
-window.addEventListener("scroll", function () {
-  // ✅ run ONLY on mobile
-  if (window.innerWidth > 767) return;
-  if (
-    mobileNav?.classList.contains("open") ||
-    document.getElementById("mobileSearchPanel")?.classList.contains("open")
-  ) {
-    return;
-  }
-
-  var currentScrollPos = window.pageYOffset;
-  var navbar = document.getElementById("navbar");
-  if (!navbar) return;
-
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.top = "0";
-  } else {
-    navbar.style.top = "-50px";
-  }
-
-  prevScrollpos = currentScrollPos;
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   /* ---------------------------
      Currency selector behavior

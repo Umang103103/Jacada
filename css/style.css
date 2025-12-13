@@ -1,12 +1,6 @@
 /* ------------------------------
    DESKTOP / SHARED STYLES
 ------------------------------ */
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: top 0.3s;
-}
 
 .topbar {
   background: #c3ad84;
@@ -43,7 +37,7 @@
 
 @media (max-width: 767.98px) {
   .topbar {
-    padding: 14px; /* mobile only */
+    padding: 0px; /* mobile only */
   }
 
   .topbar-logo {
@@ -147,7 +141,7 @@
 .animated-icon1,
 .animated-icon2,
 .animated-icon3 {
-  width: 30px;
+  width: 22px;
   height: 20px;
   position: relative;
   margin: 0px;
@@ -195,7 +189,7 @@
 }
 
 .animated-icon1 span:nth-child(1) {
-  top: 0px;
+  top: 4px;
 }
 
 .animated-icon1 span:nth-child(2) {
@@ -203,7 +197,7 @@
 }
 
 .animated-icon1 span:nth-child(3) {
-  top: 20px;
+  top: 16px;
 }
 
 .animated-icon1.open span:nth-child(1) {
@@ -418,4 +412,16 @@
   padding: 20px 0;
 }
 
-/*search button */
+/* ===========================
+   MOBILE SEARCH BUTTON
+=========================== */
+.search-btn {
+  height: 70px;
+  border: none;
+  background: transparent;
+}
+
+.search-btn i {
+  font-size: 20px;
+  color: #fff;
+}
