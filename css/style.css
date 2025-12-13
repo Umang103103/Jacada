@@ -431,83 +431,157 @@
 
 /* NAVBAR */
 /* ===============================
-   DESKTOP ONLY
+   NAV CONTAINER
 ================================ */
-@media (max-width: 991px) {
-  #navbar {
-    display: none;
-  }
-}
-
-/* ===============================
-   NAVBAR
-================================ */
-#navbar {
-  background: #2f2f2f;
+.navigation {
+  background: rgba(0, 0, 0, 0.8);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  height: 60px;
+  z-index: 101;
 }
 
-#navbar .nav-link {
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  padding: 20px 18px;
-  position: relative;
-}
-
-/* underline */
-#navbar .nav-link::after {
-  content: "";
+.background {
+  background: #000;
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 12px;
-  height: 1px;
-  background: #d6b97c;
-  width: 0;
-  transition: width 0.25s ease;
-}
-
-#navbar .nav-item:hover > .nav-link {
-  color: #d6b97c;
-  background: #000;
-}
-
-#navbar .nav-item:hover > .nav-link::after {
-  width: calc(100% - 36px);
-}
-
-/* ===============================
-   NORMAL DROPDOWNS
-================================ */
-#navbar .dropdown:not(.mega-dropdown) .dropdown-menu {
-  background: #000;
-  border: none;
-  border-radius: 0;
-  padding: 18px 22px;
-  min-width: 240px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
 }
 
-#navbar .dropdown:not(.mega-dropdown):hover > .dropdown-menu {
+/* ===============================
+   TOP MENU
+================================ */
+#menu-header-menu {
+  height: 60px;
+  align-items: center;
+}
+
+#menu-header-menu > li {
+  position: relative;
+  height: 60px;
+}
+
+.nav-link {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ACTIVE STATE: link hovered OR dropdown open */
+#navbar .menu-item-has-children:hover > .nav-link {
+  color: #d6b97c;
+  background-color: #000;
+}
+
+/* ===============================
+   MEGA PANEL
+================================ */
+.sub-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 260px;
+  background: #000;
+  display: none;
+}
+
+.menu-item-has-children:hover > .sub-menu {
   display: block;
 }
 
-#navbar .dropdown-menu a {
+.menu-item-has-children:hover ~ .background,
+.menu-item-has-children:hover > .background {
+  display: block;
+}
+
+/* ===============================
+   LEFT COLUMN (REGIONS)
+================================ */
+.sub-menu > li {
+  position: static;
   color: #d6b97c;
   font-size: 13px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 8px 0;
-  display: block;
-  text-decoration: none;
+  padding: 13px 14px;
+  cursor: pointer;
 }
 
-#navbar .dropdown-menu a:hover {
+.sub-menu > li:hover {
   color: #fff;
+}
+
+/* ===============================
+   Arrow for submenus
+================================ */
+/* REGION ITEMS (Africa, Asia, etc.) */
+.sub-menu > li.menu-item-has-children > a {
+  position: relative;
+  display: block;
+  padding-right: 24px; /* space for arrow */
+}
+
+/* Arrow */
+.sub-menu > li.menu-item-has-children > a::after {
+  content: "›";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  line-height: 1;
+  color: #d6b97c;
+  transition: color 0.2s ease;
+}
+
+/* Hover state */
+.sub-menu > li.menu-item-has-children:hover > a::after {
+  color: #fff;
+}
+
+/* ===============================
+   SUB COLUMNS
+================================ */
+.sub-menu > li > .sub-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 220px;
+  height: 100%;
+  background: #000;
+  display: none;
+  padding: 20px 60px;
+}
+
+.sub-menu > li:hover > .sub-list {
+  display: block;
+}
+
+.sub-menu > li > .sub-list:nth-of-type(2) {
+  left: calc(100% + 220px);
+}
+
+.sub-list li {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sub-list li:hover {
+  color: #d6b97c;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
