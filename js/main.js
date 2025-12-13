@@ -4,6 +4,12 @@ var prevScrollpos = window.pageYOffset;
 window.addEventListener("scroll", function () {
   // ✅ run ONLY on mobile
   if (window.innerWidth > 767) return;
+  if (
+    mobileNav?.classList.contains("open") ||
+    document.getElementById("mobileSearchPanel")?.classList.contains("open")
+  ) {
+    return;
+  }
 
   var currentScrollPos = window.pageYOffset;
   var navbar = document.getElementById("navbar");
@@ -145,81 +151,3 @@ function resetPanels() {
 }
 
 //Search panel functionality
-(function () {
-  const searchBtn = document.querySelector(".search-btn"); // header button
-  const searchIcon = searchBtn && searchBtn.querySelector("i"); // <i class="bi ...">
-  const panel = document.getElementById("mobileSearchPanel");
-  const input = document.getElementById("mobileSearchInput");
-
-  if (!searchBtn || !panel) return;
-
-  // Utility: swap to cross (bi-x) or search (bi-search)
-  function setIconToX() {
-    if (!searchIcon) return;
-    searchIcon.classList.remove("bi-search");
-    searchIcon.classList.add("bi-x");
-  }
-  function setIconToSearch() {
-    if (!searchIcon) return;
-    searchIcon.classList.remove("bi-x");
-    searchIcon.classList.add("bi-search");
-  }
-
-  function openPanel() {
-    panel.classList.add("open");
-    panel.setAttribute("aria-hidden", "false");
-    searchBtn.setAttribute("aria-expanded", "true");
-    setIconToX();
-    // prevent page scroll behind panel
-    document.documentElement.style.overflow = "hidden";
-    setTimeout(() => input && input.focus(), 200);
-  }
-
-  function closePanel() {
-    panel.classList.remove("open");
-    panel.setAttribute("aria-hidden", "true");
-    searchBtn.setAttribute("aria-expanded", "false");
-    setIconToSearch();
-    document.documentElement.style.overflow = "";
-    searchBtn.focus();
-  }
-
-  // Toggle on header button click
-  searchBtn.addEventListener("click", (e) => {
-    // If desktop, do nothing (or you can fallback to other behavior)
-    if (window.innerWidth > 767) return;
-    const isOpen = panel.classList.contains("open");
-    if (isOpen) closePanel();
-    else openPanel();
-  });
-
-  // Close when clicking outside the inner content (i.e., background)
-  panel.addEventListener("click", (evt) => {
-    if (evt.target === panel) closePanel();
-  });
-
-  // Close on Escape
-  window.addEventListener("keydown", (evt) => {
-    if (evt.key === "Escape" && panel.classList.contains("open")) closePanel();
-  });
-
-  // If user resizes to desktop while open, close and restore icon
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 767 && panel.classList.contains("open")) {
-      closePanel();
-    }
-  });
-
-  // Optional: handle Enter on input to trigger your search (hook your logic)
-  input &&
-    input.addEventListener("keydown", (evt) => {
-      if (evt.key === "Enter") {
-        evt.preventDefault();
-        const q = input.value.trim();
-        if (!q) return input.focus();
-        console.log("Search for:", q);
-        // TODO: run your search flow (navigate / API)
-        // closePanel(); // uncomment if you want to close after submit
-      }
-    });
-})();
