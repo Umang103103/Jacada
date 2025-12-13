@@ -30,7 +30,7 @@
   <body>
     <!--Topbar Section-->
     <header>
-      <div class="topbar d-flex align-items-center">
+      <div id="navbar" class="topbar d-flex align-items-center">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -93,7 +93,6 @@
               <a href="tel:6468958368" class="call-number">646-895-8368</a>
             </div>
           </div>
-
           <!-- MOBILE RIGHT SIDE (visible below md) -->
           <div class="mobile-icons d-flex d-md-none align-items-center">
             <!-- Search Icon -->
@@ -108,47 +107,122 @@
             </button>
 
             <span class="menu-text">MENU</span>
-
+            <!-- MOBILE ONLY: HAMBURGER -->
             <button
-              class="mobile-menu-btn btn p-0 d-flex align-items-center gap-4"
-              aria-expanded="false"
+              data-mdb-button-init
+              class="navbar-toggler first-button d-md-none"
+              type="button"
+              aria-label="Toggle navigation"
             >
-              <i class="fa-solid fa-bars menu-icon"></i>
-              <i class="fa-solid fa-xmark close-icon d-none"></i>
+              <div class="animated-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
+            <nav class="mobile-nav d-md-none" aria-hidden="true">
+              <!-- MAIN MENU -->
+              <div class="menu-panel active" data-panel="main">
+                <ul class="menu-list">
+                  <li>
+                    <button class="panel-link" data-target="destinations">
+                      Destinations <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="luxury-safaris">
+                      Luxury Safaris <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="trip-types">
+                      Trip Types <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="inspiration">
+                      Inspiration <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="positive-impact">
+                      Positive Impact <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="about-us">
+                      About Us <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li><a href="#">Start Planning</a></li>
+                </ul>
+              </div>
+
+              <!-- DESTINATIONS -->
+              <div class="menu-panel" data-panel="destinations">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Africa</a></li>
+                  <li><a href="#">Asia</a></li>
+                  <li><a href="#">Europe</a></li>
+                </ul>
+              </div>
+              <!-- Luxury safaris -->
+              <div class="menu-panel" data-panel="luxury-safaris">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Safari A</a></li>
+                  <li><a href="#">Safari B</a></li>
+                  <li><a href="#">Safari C</a></li>
+                </ul>
+              </div>
+              <!-- TRIP TYPES -->
+              <div class="menu-panel" data-panel="trip-types">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Honeymoon</a></li>
+                  <li><a href="#">Family</a></li>
+                </ul>
+              </div>
+              <!-- INSPIRATION -->
+              <div class="menu-panel" data-panel="inspiration">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Honeymoons</a></li>
+                  <li><a href="#">Family Travel</a></li>
+                  <li><a href="#">Luxury Escapes</a></li>
+                </ul>
+              </div>
+              <!-- POSITIVE IMPACT -->
+              <div class="menu-panel" data-panel="positive-impact">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">Communities</a></li>
+                  <li><a href="#">Conservation</a></li>
+                </ul>
+              </div>
+              <!-- ABOUT US -->
+              <div class="menu-panel" data-panel="about-us">
+                <button class="panel-back">← Back</button>
+                <ul class="menu-list">
+                  <li><a href="#">Our Story</a></li>
+                  <li><a href="#">Why Jacada</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-
-      <!-- MOBILE DROPDOWN MENU (hidden by default, appears below topbar) -->
-      <!-- BACKDROP (for mobile menu) -->
-      <div class="menu-backdrop" aria-hidden="true"></div>
-
-      <!-- existing mobile menu -->
-      <nav class="mobile-menu d-md-none" aria-hidden="true">
-        <ul class="mb-0">
-          <li>
-            <a href="#">Destinations <span class="arrow"></span></a>
-          </li>
-          <li>
-            <a href="#">Inspiration <span class="arrow"></span></a>
-          </li>
-          <li>
-            <a href="#">Travel Experts <span class="arrow"></span></a>
-          </li>
-          <li>
-            <a href="#">About <span class="arrow"></span></a>
-          </li>
-          <li>
-            <a href="#">Contact <span class="arrow"></span></a>
-          </li>
-          <li>
-            <a href="#">Start Planning <span class="arrow"></span></a>
-          </li>
-        </ul>
-      </nav>
     </header>
-
     <!-- SEARCH PANEL (mobile-only). Image is in HTML as requested -->
     <div id="mobileSearchPanel" class="search-panel" aria-hidden="true">
       <img

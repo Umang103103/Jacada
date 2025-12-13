@@ -1,3 +1,23 @@
+/*navbar js*/
+var prevScrollpos = window.pageYOffset;
+
+window.addEventListener("scroll", function () {
+  // ✅ run ONLY on mobile
+  if (window.innerWidth > 767) return;
+
+  var currentScrollPos = window.pageYOffset;
+  var navbar = document.getElementById("navbar");
+  if (!navbar) return;
+
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-50px";
+  }
+
+  prevScrollpos = currentScrollPos;
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   /* ---------------------------
      Currency selector behavior
@@ -11,171 +31,119 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let lockHover = false;
 
-    // Button click toggles open/close (overrides lockHover — user-intent)
     if (btn) {
       btn.addEventListener("click", function (e) {
         e.stopPropagation();
         selector.classList.toggle("open");
+
         if (selector.classList.contains("open")) {
-          // close other selectors
-          document.querySelectorAll(".currency-selector.open").forEach((s) => {
-            if (s !== selector) s.classList.remove("open");
-          });
+          document
+            .querySelectorAll(".currency-selector.open")
+            .forEach((s) => s !== selector && s.classList.remove("open"));
           selector.classList.remove("freeze");
           lockHover = false;
         }
       });
     }
 
-    // Item click — update button, close, lock hover until pointer leaves
     items.forEach((item) => {
       item.addEventListener("click", function (e) {
         e.stopPropagation();
+
         const symbolEl = this.querySelector(".item-symbol");
         const codeEl = this.querySelector(".item-code");
+
         if (symbolEl && codeEl && btnSymbol && btnLabel) {
           btnSymbol.textContent = symbolEl.textContent.trim();
           btnLabel.textContent = codeEl.textContent.trim();
         }
-        // close dropdown
+
         selector.classList.remove("open");
-        // lock hover until pointer leaves selector area
         lockHover = true;
         selector.classList.add("freeze");
       });
     });
 
-    // Hover open only when not locked
     selector.addEventListener("pointerenter", function () {
       if (!lockHover) {
-        // close other selectors
-        document.querySelectorAll(".currency-selector.open").forEach((s) => {
-          if (s !== selector) s.classList.remove("open");
-        });
+        document
+          .querySelectorAll(".currency-selector.open")
+          .forEach((s) => s !== selector && s.classList.remove("open"));
         selector.classList.add("open");
-      } else {
-        selector.classList.remove("open");
-        selector.classList.add("freeze");
       }
     });
 
-    // On leave, clear locks and close
     selector.addEventListener("pointerleave", function () {
       lockHover = false;
       selector.classList.remove("freeze");
       selector.classList.remove("open");
     });
 
-    // Prevent clicks inside list from bubbling
     if (list) {
-      list.addEventListener("click", function (e) {
-        e.stopPropagation();
-      });
+      list.addEventListener("click", (e) => e.stopPropagation());
     }
   });
 
-  // ONE global document click listener: closes any open selectors and mobile menu
+  // Close currency dropdowns on outside click
   document.addEventListener("click", function () {
     document.querySelectorAll(".currency-selector.open").forEach((s) => {
       s.classList.remove("open");
     });
   });
 
-  /* ---------------------------
-     Mobile menu toggle behavior
-     --------------------------- */
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const mobileMenu = document.querySelector(".mobile-menu");
-  const menuBackdrop = document.querySelector(".menu-backdrop");
-  if (menuBtn && mobileMenu) {
-    const menuIcon = menuBtn.querySelector(".menu-icon");
-    const closeIcon = menuBtn.querySelector(".close-icon");
-
-    function openMobileMenu() {
-      mobileMenu.classList.add("show");
-      menuBackdrop && menuBackdrop.classList.add("show");
-      menuIcon && menuIcon.classList.add("d-none");
-      closeIcon && closeIcon.classList.remove("d-none");
-      menuBtn.setAttribute("aria-expanded", "true");
-      mobileMenu.setAttribute("aria-hidden", "false");
-      // lock page scroll
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeMobileMenu() {
-      mobileMenu.classList.remove("show");
-      menuBackdrop && menuBackdrop.classList.remove("show");
-      menuIcon && menuIcon.classList.remove("d-none");
-      closeIcon && closeIcon.classList.add("d-none");
-      menuBtn.setAttribute("aria-expanded", "false");
-      mobileMenu.setAttribute("aria-hidden", "true");
-      // unlock page scroll
-      document.body.style.overflow = "";
-    }
-
-    menuBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      if (mobileMenu.classList.contains("show")) closeMobileMenu();
-      else openMobileMenu();
-    });
-
-    // clicking backdrop closes menu
-    if (menuBackdrop) {
-      menuBackdrop.addEventListener("click", function (e) {
-        closeMobileMenu();
-      });
-    }
-
-    // clicking outside closes mobile menu (global handler) — keep this defensive but ensure it doesn't fire when clicking inside
-    document.addEventListener("click", function () {
-      if (mobileMenu.classList.contains("show")) {
-        closeMobileMenu();
-      }
-    });
-
-    // prevent clicks inside mobile menu from closing immediately
-    mobileMenu.addEventListener("click", function (e) {
-      e.stopPropagation();
-    });
-
-    // close mobile menu on link click (mobile)
-    mobileMenu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", function () {
-        // small delay to allow navigation to start smoothly, then close UI
-        setTimeout(closeMobileMenu, 50);
-      });
-    });
-  }
-
-  /* ---------------------------
-     Accessibility: Escape to close menus
-     --------------------------- */
+  // Close currency dropdowns on Escape
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" || e.key === "Esc") {
-      // close mobile menu
-      const mm = document.querySelector(".mobile-menu.show");
-      if (mm) {
-        const backdrop = document.querySelector(".menu-backdrop");
-        mm.classList.remove("show");
-        if (backdrop) backdrop.classList.remove("show");
-        const menuBtnEl = document.querySelector(".mobile-menu-btn");
-        if (menuBtnEl) {
-          const menuIcon = menuBtnEl.querySelector(".menu-icon");
-          const closeIcon = menuBtnEl.querySelector(".close-icon");
-          menuIcon && menuIcon.classList.remove("d-none");
-          closeIcon && closeIcon.classList.add("d-none");
-          menuBtnEl.setAttribute("aria-expanded", "false");
-        }
-        document.body.style.overflow = "";
-      }
-
-      // close any open currency selectors
+    if (e.key === "Escape") {
       document.querySelectorAll(".currency-selector.open").forEach((s) => {
         s.classList.remove("open");
       });
     }
   });
 });
+/* Hamburger menu */
+
+const hamburger = document.querySelector(".first-button");
+const hamburgerIcon = document.querySelector(".animated-icon1");
+const mobileNav = document.querySelector(".mobile-nav");
+const panels = document.querySelectorAll(".menu-panel");
+
+/* Hamburger toggle */
+hamburger.addEventListener("click", () => {
+  hamburgerIcon.classList.toggle("open");
+  mobileNav.classList.toggle("open");
+
+  const open = mobileNav.classList.contains("open");
+  document.body.style.overflow = open ? "hidden" : "";
+
+  if (!open) resetPanels();
+});
+
+/* Open submenu */
+document.querySelectorAll(".panel-link").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.target;
+
+    panels.forEach((p) => p.classList.remove("active", "left"));
+    document.querySelector('[data-panel="main"]').classList.add("left");
+    document.querySelector(`[data-panel="${target}"]`).classList.add("active");
+  });
+});
+
+/* Back */
+document.querySelectorAll(".panel-back").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    panels.forEach((p) => p.classList.remove("active"));
+    document.querySelector('[data-panel="main"]').classList.remove("left");
+    document.querySelector('[data-panel="main"]').classList.add("active");
+  });
+});
+
+/* Reset when closed */
+function resetPanels() {
+  panels.forEach((p) => p.classList.remove("active", "left"));
+  document.querySelector('[data-panel="main"]').classList.add("active");
+}
+
 //Search panel functionality
 (function () {
   const searchBtn = document.querySelector(".search-btn"); // header button
