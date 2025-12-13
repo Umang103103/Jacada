@@ -108,6 +108,7 @@
   margin-top: -38px;
   padding: 0;
   list-style: none;
+  z-index: 3000;
 }
 
 .currency-list li {
@@ -424,4 +425,124 @@
 .search-btn i {
   font-size: 20px;
   color: #fff;
+}
+
+/* Style the navbar */
+
+/* NAVBAR */
+#navbar {
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 67px;
+}
+
+/* TOP LINKS */
+#navbar .nav-link {
+  position: relative;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 22px 10px;
+  font-family: Circular Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* GOLD UNDERLINE */
+#navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 0;
+  height: 1px;
+  background: #d6b97c;
+  transition: width 0.3s ease;
+}
+
+/* ACTIVE STATE (hover OR dropdown open) */
+#navbar .nav-item:hover > .nav-link {
+  color: #d6b97c;
+  background-color: #000;
+}
+
+#navbar .nav-item:hover > .nav-link::after {
+  width: 100%;
+}
+
+/* MAIN DROPDOWN */
+.dropdown-menu {
+  background: #000;
+  border: none;
+  padding: 18px 22px;
+  min-width: 240px;
+  display: none;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+#navbar .dropdown-menu {
+  border-radius: 0 !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* DROPDOWN LINKS */
+.dropdown-menu a {
+  display: block;
+  color: #d6b97c;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: #fff;
+}
+
+/* SHOW DROPDOWN BELOW */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* SUBMENU */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* SHOW SUBMENU */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+/* Add arrow to submenu parents */
+#navbar .dropdown-submenu > a {
+  position: relative;
+  padding-right: 22px; /* space for arrow */
+}
+
+/* Arrow shape */
+#navbar .dropdown-submenu > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid #d6b97c;
+  border-bottom: 1.5px solid #d6b97c;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: border-color 0.2s ease;
+}
+
+/* Arrow hover color */
+#navbar .dropdown-submenu:hover > a::after {
+  border-color: #fff;
+}
+#navbar .dropdown-submenu > a::after {
+  width: 7px;
+  height: 7px;
 }
