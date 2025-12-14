@@ -125,3 +125,71 @@ function resetPanels() {
 }
 
 //Search panel functionality
+
+//Tailored Sections
+
+const track = document.getElementById("sliderTrack");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+let slideWidth = 0;
+let isAnimating = false;
+
+function updateWidth() {
+  slideWidth = track.children[0].offsetWidth;
+}
+
+function moveNext() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  track.style.transition = "transform 0.4s ease";
+  track.style.transform = `translateX(-${slideWidth}px)`;
+
+  track.addEventListener(
+    "transitionend",
+    () => {
+      track.style.transition = "none";
+
+      // MOVE first slide to the end
+      track.appendChild(track.firstElementChild);
+
+      track.style.transform = "translateX(0)";
+      isAnimating = false;
+    },
+    { once: true }
+  );
+}
+
+function movePrev() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  track.style.transition = "none";
+
+  // MOVE last slide to the front
+  track.insertBefore(track.lastElementChild, track.firstElementChild);
+
+  track.style.transform = `translateX(-${slideWidth}px)`;
+
+  requestAnimationFrame(() => {
+    track.style.transition = "transform 0.4s ease";
+    track.style.transform = "translateX(0)";
+  });
+
+  track.addEventListener(
+    "transitionend",
+    () => {
+      isAnimating = false;
+    },
+    { once: true }
+  );
+}
+
+nextBtn.addEventListener("click", moveNext);
+prevBtn.addEventListener("click", movePrev);
+
+window.addEventListener("resize", updateWidth);
+
+// INIT
+updateWidth();

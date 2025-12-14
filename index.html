@@ -24,6 +24,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -491,8 +496,239 @@
         </div>
       </nav>
     </header>
+    <!-- HERO  SECTION -->
+    <section class="hero-video-section">
+      <!-- Background Video -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./images/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="container hero-content">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h1 class="hero-title">
+              Exceptional<br />
+              Journeys
+            </h1>
+
+            <p class="hero-subtitle">
+              Set off on remarkable, deeply personal trips planned by
+              award-winning specialists
+            </p>
+          </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="row justify-content-center align-items-center hero-actions">
+          <!-- LEFT -->
+          <div class="col-12 col-lg-5 text-center text-lg-end mb-4 mb-lg-0">
+            <span class="hero-script">Take me to</span>
+
+            <div class="hero-search mx-lg-0 mx-auto">
+              <input type="text" placeholder="Search" />
+              <button aria-label="Search">🔍</button>
+            </div>
+          </div>
+
+          <!-- DIVIDER (desktop only) -->
+          <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+            <div class="hero-divider"></div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="col-12 col-lg-5 text-center text-lg-start">
+            <span class="hero-script">Not sure where?</span>
+            <a href="#" class="hero-btn"> USE OUR TRIP PLANNER </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--tailored Section-->
+    <section class="jacada-slider">
+      <div class="container text-center">
+        <h2 class="slider-title">
+          Unforgettable trips <br />
+          tailored <span>to you</span>
+        </h2>
+
+        <p class="slider-desc">
+          Every trip we plan is one of a kind. Our experts’ first-hand knowledge
+          ensures every journey is unforgettable.
+        </p>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="container-fluid my-5">
+        <div
+          class="d-flex justify-content-between align-items-center mb-3"
+        ></div>
+
+        <div class="slider-wrapper">
+          <div class="slider-buttons">
+            <button class="btn" id="prevBtn">‹</button>
+            <button class="btn" id="nextBtn">›</button>
+          </div>
+          <div class="slider-track" id="sliderTrack">
+            <!-- Card 1 -->
+            <div class="slider-item">
+              <div class="card">
+                <img
+                  src="https://picsum.photos/400/250?1"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Place One</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="slider-item">
+              <div class="card">
+                <img
+                  src="https://picsum.photos/400/250?2"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Place Two</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="slider-item">
+              <div class="card">
+                <img
+                  src="https://picsum.photos/400/250?3"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Place Three</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="slider-item">
+              <div class="card">
+                <img
+                  src="https://picsum.photos/400/250?4"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Place Four</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="slider-item">
+              <div class="card">
+                <img
+                  src="https://picsum.photos/400/250?5"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Place Five</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="jacada-footer">
+      <div class="container">
+        <!-- TOP FOOTER -->
+        <div class="row gy-5">
+          <!-- NEWSLETTER -->
+          <div class="col-12 col-lg-4">
+            <h6 class="footer-title">
+              Receive Travel Inspiration in your Inbox
+            </h6>
+
+            <form class="footer-form">
+              <input type="text" placeholder="First Name*" />
+              <input type="text" placeholder="Last Name*" />
+              <input type="email" placeholder="Email*" />
+
+              <label class="footer-checkbox">
+                <input type="checkbox" />
+                I am happy to receive emails from Jacada, including travel
+                guides and information.*
+              </label>
+
+              <button type="submit" class="footer-btn">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- AWARDS (PLACEHOLDER) -->
+          <div class="col-12 col-lg-2 text-center">
+            <div class="award-placeholder">Award</div>
+            <div class="award-placeholder mt-3">Award</div>
+          </div>
+
+          <!-- DESTINATIONS -->
+          <div class="col-12 col-lg-3">
+            <h6 class="footer-title">Destinations</h6>
+            <ul class="footer-links">
+              <li>Africa</li>
+              <li>Asia</li>
+              <li>Australasia</li>
+              <li>Central Asia</li>
+              <li>Europe</li>
+              <li>Indian Subcontinent</li>
+              <li>Latin America</li>
+              <li>Middle East</li>
+              <li>Polar Regions</li>
+              <li>South Pacific</li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="col-12 col-lg-3">
+            <h6 class="footer-title">Get in Touch</h6>
+            <p class="footer-text fw-bold">646-895-8368</p>
+            <p class="footer-text">enquire@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Press Enquiries</h6>
+            <p class="footer-text">press@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Find us on</h6>
+            <div class="social-placeholder">Icons</div>
+
+            <h6 class="footer-title mt-4">Excellent</h6>
+            <div class="trustpilot-placeholder">★★★★★</div>
+            <p class="footer-small">based on 2,401 reviews</p>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="footer-divider" />
+
+        <!-- BOTTOM BAR -->
+        <div class="row align-items-center gy-3 footer-bottom">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <span class="footer-logo">Jacada</span>
+          </div>
+
+          <div class="col-12 col-lg-6 text-center text-lg-end footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <span>© Copyright 2010–2025 Jacada Travel</span>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
