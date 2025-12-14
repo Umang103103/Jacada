@@ -734,23 +734,30 @@ ul {
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 0 7%;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.slider-viewport {
+  overflow: hidden;
+  width: 100%;
 }
 
 /* Track */
 .slider-track {
   display: flex;
+  gap: 0;
   transition: transform 0.4s ease;
+  will-change: transform;
 }
 
 /* Each card */
 .slider-item {
-  flex: 0 0 33.3333%;
+  flex: 0 0 28%;
   padding: 0 10px;
-}
-
-.slider-track {
-  display: flex;
-  gap: 0;
 }
 /* Button container */
 .slider-buttons {
@@ -793,13 +800,6 @@ ul {
   color: #fff !important;
   background-color: #c1aa7f !important;
   border-color: #c1aa7f !important;
-}
-#prevBtn {
-  margin-left: -10px;
-}
-
-#nextBtn {
-  margin-right: -10px;
 }
 
 /* Tablet */

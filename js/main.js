@@ -127,34 +127,45 @@ function resetPanels() {
 //Search panel functionality
 
 //Tailored Sections
-
 const track = document.getElementById("sliderTrack");
+const wrapper = document.querySelector(".slider-wrapper");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const firstClone = track.children[0].cloneNode(true);
+const lastClone = track.children[track.children.length - 1].cloneNode(true);
 
 let slideWidth = 0;
+let baseOffset = 0;
 let isAnimating = false;
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, track.firstElementChild);
 
 function updateWidth() {
   slideWidth = track.children[0].offsetWidth;
+
+  const paddingLeft = parseFloat(getComputedStyle(wrapper).paddingLeft);
+
+  /* 🔑 THIS is the correct resting position */
+  baseOffset = paddingLeft + slideWidth * 0.5;
+
+  track.style.transition = "none";
+  track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
 }
 
 function moveNext() {
   if (isAnimating) return;
   isAnimating = true;
 
-  track.style.transition = "transform 0.4s ease";
-  track.style.transform = `translateX(-${slideWidth}px)`;
+  track.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
+  track.style.transform = `translate3d(-${baseOffset + slideWidth}px, 0, 0)`;
 
   track.addEventListener(
     "transitionend",
     () => {
       track.style.transition = "none";
-
-      // MOVE first slide to the end
       track.appendChild(track.firstElementChild);
-
-      track.style.transform = "translateX(0)";
+      track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
       isAnimating = false;
     },
     { once: true }
@@ -166,15 +177,12 @@ function movePrev() {
   isAnimating = true;
 
   track.style.transition = "none";
-
-  // MOVE last slide to the front
   track.insertBefore(track.lastElementChild, track.firstElementChild);
-
-  track.style.transform = `translateX(-${slideWidth}px)`;
+  track.style.transform = `translate3d(-${baseOffset + slideWidth}px, 0, 0)`;
 
   requestAnimationFrame(() => {
-    track.style.transition = "transform 0.4s ease";
-    track.style.transform = "translateX(0)";
+    track.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
+    track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
   });
 
   track.addEventListener(
@@ -188,8 +196,7 @@ function movePrev() {
 
 nextBtn.addEventListener("click", moveNext);
 prevBtn.addEventListener("click", movePrev);
-
 window.addEventListener("resize", updateWidth);
 
-// INIT
+/* INIT */
 updateWidth();
