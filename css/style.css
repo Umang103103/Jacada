@@ -776,12 +776,14 @@ body {
 .inspiration-swiper {
   overflow: hidden;
   margin-top: 30px;
+  padding: 0px 80px;
 }
 
 .swiper-wrapper {
   display: flex;
   flex-wrap: nowrap;
   box-sizing: content-box;
+  margin-left: 80px;
 }
 
 .swiper-slide {
