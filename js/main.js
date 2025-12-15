@@ -124,7 +124,124 @@ function resetPanels() {
   document.querySelector('[data-panel="main"]').classList.add("active");
 }
 
-//Search panel functionality
+//Navbar
+const navbar = document.getElementById("navbar");
+const stickyOffset = 108; // same as topbar height
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > stickyOffset) {
+    navbar.classList.add("is-sticky");
+  } else {
+    navbar.classList.remove("is-sticky");
+  }
+});
+
+//Tailored js
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper(".tailored-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+
+    loop: true,
+    loopAdditionalSlides: 3,
+    loopPreventsSliding: false,
+
+    initialSlide: 1,
+    speed: 700,
+
+    grabCursor: true,
+    watchSlidesProgress: true,
+
+    navigation: {
+      nextEl: ".tailored-swiper .swiper-button-next",
+      prevEl: ".tailored-swiper .swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".tailored-swiper .swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 0,
+      },
+      768: {
+        slidesPerView: "auto",
+      },
+      992: {
+        slidesPerView: "auto",
+      },
+    },
+  });
+});
+
+//Destination Section
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".destinations-list li");
+
+  // 🔹 Preload all images
+  items.forEach((item) => {
+    const img = new Image();
+    img.src = item.dataset.image;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const imageEl = document.getElementById("destinationImage");
+  const captionEl = document.getElementById("destinationCaption");
+  const items = document.querySelectorAll(".destinations-list li");
+
+  let isTransitioning = false;
+
+  items.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      if (isTransitioning) return;
+
+      const newSrc = item.dataset.image;
+      const newCaption = item.dataset.caption;
+
+      if (!newSrc || imageEl.src.includes(newSrc)) return;
+
+      isTransitioning = true;
+
+      const tempImg = new Image();
+      tempImg.src = newSrc;
+
+      tempImg.onload = () => {
+        imageEl.style.opacity = "0";
+
+        setTimeout(() => {
+          imageEl.src = newSrc;
+          captionEl.textContent = newCaption || "";
+          imageEl.style.opacity = "1";
+          isTransitioning = false;
+        }, 250);
+      };
+    });
+  });
+});
+
+//Reviews Section
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".reviews-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 700,
+
+    navigation: {
+      nextEl: ".reviews-button-next",
+      prevEl: ".reviews-button-prev",
+    },
+
+    pagination: {
+      el: ".reviews-pagination",
+      clickable: true,
+    },
+  });
+});
 
 //Inspiration swiper Section
 
@@ -158,6 +275,9 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1.1,
       },
       768: {
+        slidesPerView: "auto",
+      },
+      992: {
         slidesPerView: "auto",
       },
     },

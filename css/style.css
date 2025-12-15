@@ -1,3 +1,11 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: serif;
+}
+
 /* ------------------------------
    DESKTOP / SHARED STYLES
 ------------------------------ */
@@ -430,26 +438,55 @@
 /* Style the navbar */
 
 /* NAVBAR */
-/* ===============================
-   NAV CONTAINER
-================================ */
+
 .navigation {
   background: rgba(0, 0, 0, 0.8);
-  position: sticky;
-  top: 0;
-  z-index: 101;
+  overflow: visible;
+}
+@media (min-width: 992px) {
+  .navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
 }
 
 .background {
-  background: #000;
   position: absolute;
   top: 60px;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 100vh;
+  background: #000;
   display: none;
 }
 
+/* Navbar fixed */
+#navbar {
+  position: absolute; /* IMPORTANT */
+  top: 108px; /* height of topbar */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+/* When it sticks */
+#navbar.is-sticky {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Desktop only */
+@media (max-width: 991px) {
+  #navbar {
+    position: relative;
+    top: 0;
+  }
+}
 /* ===============================
    TOP MENU
 ================================ */
@@ -727,15 +764,483 @@ ul {
     width: 220px;
   }
 }
-
-/* Inspiration Section */
-
-body {
-  background: #faf8f2;
-  font-family: serif;
+@media (max-width: 768px) {
+  .hero-video-section {
+    min-height: 60vh;
+  }
 }
 
+/* ==============================
+   Tailored Section
+============================== */
+
+.tailored-section {
+  padding: 80px 0 100px 0px;
+  text-align: center;
+  background: #faf8f2;
+}
+.tailored-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.tailored-swiper {
+  margin-top: 4.625rem;
+
+  position: relative;
+  overflow: hidden;
+}
+.tailored-swiper-wrap {
+  padding: 0 120px;
+  overflow: hidden;
+}
+
+.tailored-swiper.swiper-horizontal {
+  touch-action: pan-y;
+}
+
+/* Wrapper */
+.tailored-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  transform: translateZ(0);
+  margin-left: 115px;
+}
+
+.tailored-swiper .swiper-slide {
+  width: 440px;
+  margin-right: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  display: block;
+
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.tailored-swiper.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .tailored-swiper .swiper-slide:nth-child(even) {
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tailored-swiper .swiper-slide:nth-child(even) {
+    margin-top: 2.5rem;
+  }
+}
+
+.tailored-swiper .swiper-slide-active {
+  transform: scale(1.12);
+  z-index: 3;
+}
+
+.tailored-swiper .swiper-slide-prev,
+.tailored-swiper .swiper-slide-next {
+  transform: scale(0.94);
+  z-index: 2;
+}
+
+.tailored-swiper .tailored-link {
+  display: block;
+  position: relative;
+  padding: 0.3125rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.tailored-swiper .tailored-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: block;
+  overflow: hidden;
+}
+
+.tailored-swiper .tailored-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tailored-swiper .tailored-title {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 1.125rem;
+  color: #fff;
+}
+
+.tailored-trip-title {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.tailored-view {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.tailored-swiper .swiper-button-prev,
+.tailored-swiper .swiper-button-next {
+  color: #000;
+}
+@media (max-width: 768px) {
+  .tailored-swiper .swiper-wrapper {
+    margin-left: -370px;
+  }
+  .tailored-swiper .swiper-slide {
+    width: 360px;
+  }
+}
+
+/* ==============================
+   Destinations Section
+============================== */
+
+.destinations-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 160px;
+  align-items: stretch;
+}
+
+.destinations-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.destinations-image img {
+  transition: opacity 0.3s ease;
+}
+.destinations-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark gradient overlay */
+.destinations-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 30%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  pointer-events: none;
+}
+
+.destinations-caption {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.destinations-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.destinations-eyebrow {
+  font-size: 30px;
+  color: #c1aa7f;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.destinations-eyebrow::after {
+  content: "";
+  display: block;
+
+  height: 1px;
+  background: #c1aa7f;
+  margin-top: 12px;
+}
+
+.destinations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.destinations-list li {
+  font-family: serif;
+  font-size: 42px;
+  line-height: 1.25;
+  color: #9b9b9b;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.destinations-list li:hover {
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .destinations-list li {
+    font-size: 32px;
+  }
+}
+
+/* ==============================
+   Reviews Section
+============================== */
+
+.reviews-section {
+  background: #faf8f2;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.reviews-swiper {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Slide content */
+.reviews-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Quote */
+.review-quote {
+  font-family: serif;
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+
+/* Text */
+.review-text {
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  color: #1a1a1a;
+}
+
+/* Stars */
+.review-stars {
+  font-size: 22px;
+  letter-spacing: 6px;
+  color: #c1aa7f;
+  margin-bottom: 18px;
+}
+
+/* Author */
+.review-author {
+  font-size: 16px;
+  color: #000;
+}
+
+.review-author span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.reviews-button-prev,
+.reviews-button-next {
+  width: 52px;
+  height: 52px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.reviews-button-prev {
+  left: -80px;
+}
+
+.reviews-button-next {
+  right: -80px;
+}
+
+/* Arrow color */
+.reviews-swiper {
+  --swiper-navigation-color: #c1aa7f;
+}
+
+.reviews-pagination {
+  margin-top: 60px;
+  position: relative;
+}
+
+.reviews-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #ddd2bf;
+  opacity: 1;
+  margin: 0 6px;
+}
+
+.reviews-pagination .swiper-pagination-bullet-active {
+  background: #c1aa7f;
+  transform: scale(1.3);
+}
+
+/* ==============================
+   Experience Section
+============================== */
+
+/* Card wrapper */
+.experience-static-card {
+  position: relative;
+  overflow: visible;
+}
+
+/* Image */
+.experience-static-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* White content box */
+
+.experience-static-box {
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  transform: translateX(-50%);
+
+  height: 12rem;
+  background: #fff;
+  padding: 32px 36px;
+  width: calc(100% - 80px);
+  max-width: 460px;
+
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.experience-static-card:hover .experience-static-box {
+  transform: translateX(-50%) translateY(-25px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Eyebrow */
+.experience-static-eyebrow {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: #c1aa7f;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.experience-static-title {
+  font-family: serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+/* Text */
+.experience-static-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive */
+
+@media (min-width: 992px) {
+  .experience-static-section {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-static-card {
+    overflow: hidden;
+  }
+
+  .experience-static-card img {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .experience-static-box {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+
+    margin-top: -4px;
+    padding: 28px 24px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .experience-static-card:hover .experience-static-box {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  .experience-static-card {
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    border-radius: 2px;
+  }
+
+  .experience-static-card img {
+    display: block;
+  }
+}
+
+/* ==============================
+   Insipred Section
+============================== */
+
 .inspiration-section {
+  background: #faf8f2;
   padding: 80px 0 100px;
   text-align: center;
 }
@@ -776,14 +1281,13 @@ body {
 .inspiration-swiper {
   overflow: hidden;
   margin-top: 30px;
-  padding: 0px 80px;
 }
 
-.swiper-wrapper {
+.inspiration-swiper .swiper-wrapper {
   display: flex;
   flex-wrap: nowrap;
   box-sizing: content-box;
-  margin-left: 80px;
+  margin-left: 150px;
 }
 
 .swiper-slide {
@@ -913,12 +1417,16 @@ body {
 @media (max-width: 768px) {
   .inspiration-swiper {
     padding-left: 50px;
-    padding-right: 30px;
+    padding-right: 65px;
     overflow: hidden;
   }
 
   .swiper-wrapper {
     margin-left: 7px;
+  }
+
+  .inspiration-swiper .swiper-wrapper {
+    margin-left: 20px;
   }
 
   .swiper-slide {
