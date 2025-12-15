@@ -126,77 +126,40 @@ function resetPanels() {
 
 //Search panel functionality
 
-//Tailored Sections
-const track = document.getElementById("sliderTrack");
-const wrapper = document.querySelector(".slider-wrapper");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
-const firstClone = track.children[0].cloneNode(true);
-const lastClone = track.children[track.children.length - 1].cloneNode(true);
+//Inspiration swiper Section
 
-let slideWidth = 0;
-let baseOffset = 0;
-let isAnimating = false;
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".inspiration-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 32,
 
-track.appendChild(firstClone);
-track.insertBefore(lastClone, track.firstElementChild);
+    loop: true,
+    loopAdditionalSlides: 3,
+    loopPreventsSlide: false,
 
-function updateWidth() {
-  slideWidth = track.children[0].offsetWidth;
+    initialSlide: 1,
+    speed: 700,
 
-  const paddingLeft = parseFloat(getComputedStyle(wrapper).paddingLeft);
+    grabCursor: true,
+    watchSlidesProgress: true,
 
-  /* 🔑 THIS is the correct resting position */
-  baseOffset = paddingLeft + slideWidth * 0.5;
-
-  track.style.transition = "none";
-  track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
-}
-
-function moveNext() {
-  if (isAnimating) return;
-  isAnimating = true;
-
-  track.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
-  track.style.transform = `translate3d(-${baseOffset + slideWidth}px, 0, 0)`;
-
-  track.addEventListener(
-    "transitionend",
-    () => {
-      track.style.transition = "none";
-      track.appendChild(track.firstElementChild);
-      track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
-      isAnimating = false;
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    { once: true }
-  );
-}
 
-function movePrev() {
-  if (isAnimating) return;
-  isAnimating = true;
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-  track.style.transition = "none";
-  track.insertBefore(track.lastElementChild, track.firstElementChild);
-  track.style.transform = `translate3d(-${baseOffset + slideWidth}px, 0, 0)`;
-
-  requestAnimationFrame(() => {
-    track.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
-    track.style.transform = `translate3d(-${baseOffset}px, 0, 0)`;
+    breakpoints: {
+      0: {
+        slidesPerView: 1.1,
+      },
+      768: {
+        slidesPerView: "auto",
+      },
+    },
   });
-
-  track.addEventListener(
-    "transitionend",
-    () => {
-      isAnimating = false;
-    },
-    { once: true }
-  );
-}
-
-nextBtn.addEventListener("click", moveNext);
-prevBtn.addEventListener("click", movePrev);
-window.addEventListener("resize", updateWidth);
-
-/* INIT */
-updateWidth();
+});
