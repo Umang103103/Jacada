@@ -126,7 +126,7 @@ function resetPanels() {
 
 //Navbar
 const navbar = document.getElementById("navbar");
-const stickyOffset = 108; // same as topbar height
+const stickyOffset = 108;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > stickyOffset) {
@@ -145,10 +145,8 @@ searchButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const isOpen = searchOverlay.classList.toggle("active");
 
-    // Lock / unlock background scroll
     body.classList.toggle("search-open", isOpen);
 
-    // Toggle icons ONLY inside the clicked button
     const searchIcon = btn.querySelector(".search-icon");
     const closeIcon = btn.querySelector(".search-close");
 
@@ -157,7 +155,6 @@ searchButtons.forEach((btn) => {
       closeIcon.classList.toggle("d-none", !isOpen);
     }
 
-    // Accessibility
     btn.setAttribute("aria-expanded", isOpen);
   });
 });
@@ -205,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".destinations-list li");
 
-  // 🔹 Preload all images
   items.forEach((item) => {
     const img = new Image();
     img.src = item.dataset.image;
@@ -246,6 +242,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//destination mobile
+function setupDestinationsMobile() {
+  if (window.innerWidth <= 992) {
+    document.querySelectorAll(".destinations-list li").forEach((item) => {
+      const img = item.dataset.image;
+      if (img) {
+        item.style.backgroundImage = `url(${img})`;
+      }
+    });
+  } else {
+    // Clean up when resizing back to desktop
+    document.querySelectorAll(".destinations-list li").forEach((item) => {
+      item.style.backgroundImage = "";
+    });
+  }
+}
+
+setupDestinationsMobile();
+window.addEventListener("resize", setupDestinationsMobile);
 
 //Reviews Section
 
@@ -308,3 +324,20 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+//CTA -BAR
+const mobileCTA = document.getElementById("mobileTravelCTA");
+
+function handleMobileCTA() {
+  if (window.innerWidth > 992) return;
+
+  const triggerPoint = window.innerHeight * 0.3;
+
+  if (window.scrollY > triggerPoint) {
+    mobileCTA.classList.add("active");
+  } else {
+    mobileCTA.classList.remove("active");
+  }
+}
+
+window.addEventListener("scroll", handleMobileCTA);
+window.addEventListener("resize", handleMobileCTA);

@@ -946,6 +946,53 @@ ul {
 }
 
 /* ==============================
+   Adventure Section
+============================== */
+.adventure-section {
+  background: #ffffff;
+  padding: 5rem 0rem !important;
+}
+
+.adventure-title {
+  font-family: serif;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.adventure-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Button (reuse your existing style if you want) */
+.btn-start-planning {
+  background: #c1aa7f;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.btn-start-planning:hover {
+  background: #b29a6c;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .adventure-title {
+    font-size: 32px;
+  }
+
+  .adventure-text {
+    font-size: 16px;
+  }
+}
+
+/* ==============================
    Tailored Section
 ============================== */
 
@@ -1067,7 +1114,7 @@ ul {
 }
 
 .tailored-trip-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 0 0.25rem;
 }
 
@@ -1183,6 +1230,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 50px 10px;
 }
 
 .destinations-eyebrow {
@@ -1228,6 +1276,79 @@ ul {
 
   .destinations-list li {
     font-size: 32px;
+  }
+}
+/*Moblie Responsive*/
+@media (max-width: 992px) {
+  .destinations-image {
+    display: none;
+  }
+
+  /* Grid layout */
+  .destinations-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Destination cards */
+  .destinations-list li {
+    position: relative;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    overflow: hidden;
+
+    cursor: pointer;
+  }
+
+  /* Dark overlay */
+  .destinations-list li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #393732 0 0 no-repeat padding-box;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .destination-title {
+    position: relative;
+    z-index: 2;
+
+    color: #fff;
+    font-family: serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+
+    mix-blend-mode: normal;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  .destinations-eyebrow {
+    color: #000;
+    margin: 0rem auto 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    position: relative;
+  }
+  .destinations-eyebrow::after {
+    display: none;
+  }
+  .destinations-list li:hover {
+    color: #fff;
   }
 }
 
@@ -1331,6 +1452,50 @@ ul {
 .reviews-pagination .swiper-pagination-bullet-active {
   background: #c1aa7f;
   transform: scale(1.3);
+}
+@media (max-width: 767px) {
+  .reviews-section {
+    padding: 80px 16px;
+  }
+
+  /* Quote */
+  .review-quote {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  /* Text */
+  .review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  /* Stars */
+  .review-stars {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+  }
+
+  /* Author */
+  .review-author {
+    font-size: 14px;
+  }
+
+  .review-author span {
+    font-size: 12px;
+  }
+  /*Arrow button for mobile if not wanted
+  /*.reviews-swiper .swiper-button-next,
+  .reviews-swiper .swiper-button-prev {
+    display: none;
+  }*/
+
+  .reviews-pagination {
+    margin-top: 40px;
+  }
 }
 
 /* ==============================
@@ -1448,6 +1613,52 @@ ul {
 
   .experience-static-card img {
     display: block;
+  }
+}
+
+/*==============================
+  Why Book With Jacada
+===============================*/
+.why-jacada {
+  background: #f9f7f2;
+}
+
+.why-jacada h2 {
+  font-family: serif;
+  font-size: 40px;
+}
+
+/* Cards */
+.why-card {
+  padding: 20px;
+}
+
+.why-card img {
+  max-width: 140px;
+  margin-bottom: 20px;
+}
+
+.why-card h4 {
+  font-family: serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Horizontal scroll on mobile */
+.why-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 991px) {
+  .why-scroll > div {
+    flex-shrink: 0;
   }
 }
 
@@ -1744,6 +1955,59 @@ ul {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*================================
+    CTA BAR
+================================*/
+/* MOBILE CTA BAR */
+.mobile-travel-cta {
+  position: fixed;
+  left: 0;
+  bottom: -120px;
+  width: 100%;
+  padding: 16px 20px;
+  width: calc(100% - 25px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  background: #3a3832;
+  color: #fff;
+  margin: 0px 13px 30px;
+  z-index: 999;
+  transition: transform 0.4s ease, bottom 0.4s ease;
+}
+
+/* Visible state */
+.mobile-travel-cta.active {
+  bottom: 0;
+}
+
+/* Text */
+.mobile-travel-cta .cta-text {
+  font-size: 16px;
+  font-family: serif;
+}
+
+/* Button */
+.mobile-travel-cta .cta-btn {
+  background: #c1aa7f;
+  color: #fff;
+  padding: 12px 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Desktop: never show */
+@media (min-width: 993px) {
+  .mobile-travel-cta {
+    display: none;
   }
 }
 
