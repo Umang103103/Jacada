@@ -136,15 +136,39 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//Search Overlay
+const searchButtons = document.querySelectorAll(".search-btn");
+const searchOverlay = document.getElementById("searchOverlay");
+const body = document.body;
+
+searchButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const isOpen = searchOverlay.classList.toggle("active");
+
+    // Lock / unlock background scroll
+    body.classList.toggle("search-open", isOpen);
+
+    // Toggle icons ONLY inside the clicked button
+    const searchIcon = btn.querySelector(".search-icon");
+    const closeIcon = btn.querySelector(".search-close");
+
+    if (searchIcon && closeIcon) {
+      searchIcon.classList.toggle("d-none", isOpen);
+      closeIcon.classList.toggle("d-none", !isOpen);
+    }
+
+    // Accessibility
+    btn.setAttribute("aria-expanded", isOpen);
+  });
+});
+
 //Tailored js
 document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".tailored-swiper", {
     slidesPerView: "auto",
     spaceBetween: 16,
 
-    loop: true,
-    loopAdditionalSlides: 3,
-    loopPreventsSliding: false,
+    loop: false,
 
     initialSlide: 1,
     speed: 700,
@@ -164,13 +188,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       0: {
-        slidesPerView: 0,
+        slidesPerView: "1",
       },
       768: {
         slidesPerView: "auto",
       },
       992: {
-        slidesPerView: "auto",
+        slidesPerView: "3.2",
       },
     },
   });
@@ -248,11 +272,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".inspiration-swiper", {
     slidesPerView: "auto",
-    spaceBetween: 32,
 
-    loop: true,
-    loopAdditionalSlides: 3,
-    loopPreventsSlide: false,
+    loop: false,
 
     initialSlide: 1,
     speed: 700,
@@ -272,13 +293,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     breakpoints: {
       0: {
-        slidesPerView: 1.1,
+        slidesPerView: "1",
+        spaceBetween: 18,
       },
       768: {
-        slidesPerView: "auto",
+        slidesPerView: "3",
+        spaceBetween: 32,
       },
-      992: {
-        slidesPerView: "auto",
+
+      1200: {
+        slidesPerView: "4",
+        spaceBetween: 32,
       },
     },
   });

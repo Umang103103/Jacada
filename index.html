@@ -171,7 +171,9 @@
 
               <!-- DESTINATIONS -->
               <div class="menu-panel" data-panel="destinations">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Africa</a></li>
                   <li><a href="#">Asia</a></li>
@@ -180,7 +182,9 @@
               </div>
               <!-- Luxury safaris -->
               <div class="menu-panel" data-panel="luxury-safaris">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Safari A</a></li>
                   <li><a href="#">Safari B</a></li>
@@ -189,7 +193,9 @@
               </div>
               <!-- TRIP TYPES -->
               <div class="menu-panel" data-panel="trip-types">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Adventure</a></li>
                   <li><a href="#">Honeymoon</a></li>
@@ -198,7 +204,9 @@
               </div>
               <!-- INSPIRATION -->
               <div class="menu-panel" data-panel="inspiration">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Honeymoons</a></li>
                   <li><a href="#">Family Travel</a></li>
@@ -207,7 +215,9 @@
               </div>
               <!-- POSITIVE IMPACT -->
               <div class="menu-panel" data-panel="positive-impact">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Sustainability</a></li>
                   <li><a href="#">Communities</a></li>
@@ -216,7 +226,9 @@
               </div>
               <!-- ABOUT US -->
               <div class="menu-panel" data-panel="about-us">
-                <button class="panel-back">← Back</button>
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
                 <ul class="menu-list">
                   <li><a href="#">Our Story</a></li>
                   <li><a href="#">Why Jacada</a></li>
@@ -493,8 +505,35 @@
               </ul>
             </li>
           </ul>
+          <div class="nav-actions">
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
+            <a href="#" class="btn-start-planning"> Start Planning </a>
+          </div>
         </div>
       </nav>
+      <!--Search Overlay-->
+      <div
+        class="search-overlay"
+        id="searchOverlay"
+        style="
+          background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url('./images/search.jpg') center / cover no-repeat;
+        "
+      >
+        <div class="search-inner">
+          <div class="search-field">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" placeholder="Search..." autofocus />
+          </div>
+        </div>
+      </div>
     </header>
     <!-- HERO  SECTION -->
     <section class="hero-video-section">
@@ -526,8 +565,10 @@
     <!--tailored section-->
     <section class="tailored-section">
       <div class="container">
-        <h2 class="section-title">Unforgettable trips <span>tailored</span></h2>
-        <p class="section-text">
+        <h2 class="tailored-header">
+          Unforgettable trips <span>tailored</span>
+        </h2>
+        <p class="tailored-text">
           Every trip we plan is one of a kind. No matter where you want to go,
           our experts’ honest advice and first-hand knowledge ensure each
           adventure you take is more memorable than the last.
@@ -546,7 +587,6 @@
               </div>
               <div class="tailored-title">
                 <p class="tailored-trip-title">Indian Wildlife and Palaces</p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -563,7 +603,6 @@
                 <p class="tailored-trip-title">
                   Faces of Africa: An Epic Journey Tour
                 </p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -578,7 +617,6 @@
               </div>
               <div class="tailored-title">
                 <p class="tailored-trip-title">Exploring Provence</p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -595,7 +633,6 @@
                 <p class="tailored-trip-title">
                   North to South: Australia by Rail
                 </p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -611,7 +648,6 @@
                 <p class="tailored-trip-title">
                   North to South: Australia by Rail
                 </p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -627,7 +663,6 @@
                 <p class="tailored-trip-title">
                   North to South: Australia by Rail
                 </p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -643,7 +678,6 @@
                 <p class="tailored-trip-title">
                   North to South: Australia by Rail
                 </p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -657,7 +691,6 @@
               </div>
               <div class="tailored-title">
                 <p class="tailored-trip-title">Exploring Provence</p>
-                <p class="tailored-view">View trip</p>
               </div>
             </a>
           </div>
@@ -881,6 +914,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1018/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 4 Available
+                  </button>
+                </div>
                 <h3>The Best Places to Visit in 2026</h3>
                 <span>Read more</span>
               </div>
@@ -892,6 +937,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1024/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 4 Available
+                  </button>
+                </div>
                 <h3>19 Top Luxury Hotels Worldwide for Stargazing</h3>
                 <span>Read more</span>
               </div>
@@ -903,6 +960,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1036/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 4 Available
+                  </button>
+                </div>
                 <h3>
                   The Best Hotels and Lodges for Farm-to-Table Experiences
                 </h3>
@@ -916,6 +985,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1043/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 4 Available
+                  </button>
+                </div>
                 <h3>The Best Walking Safaris in Africa</h3>
                 <span>Read more</span>
               </div>
@@ -927,6 +1008,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1018/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 6 Available
+                  </button>
+                </div>
                 <h3>The Best Places to Visit in 2026</h3>
                 <span>Read more</span>
               </div>
@@ -937,6 +1030,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1018/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 5 Available
+                  </button>
+                </div>
                 <h3>The Best Places to Visit in 2026</h3>
                 <span>Read more</span>
               </div>
@@ -947,6 +1052,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1018/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 3 Available
+                  </button>
+                </div>
                 <h3>The Best Places to Visit in 2026</h3>
                 <span>Read more</span>
               </div>
@@ -957,6 +1074,18 @@
             <div class="slide-card">
               <img src="https://picsum.photos/id/1018/800/1000" />
               <div class="card-overlay">
+                <div class="trip-badge-container">
+                  <div class="trip-date-badge">15 Oct - 25 Oct 2023</div>
+                  <div class="trip-price-badge">$2,850</div>
+                </div>
+                <div class="trip-status-container">
+                  <button class="trip-status-btn trip-status-confirmed">
+                    <i class="fas fa-check-circle"></i> Confirmed
+                  </button>
+                  <button class="trip-status-btn trip-status-available">
+                    <i class="fas fa-users"></i> 2 Available
+                  </button>
+                </div>
                 <h3>The Best Places to Visit in 2026</h3>
                 <span>Read more</span>
               </div>
