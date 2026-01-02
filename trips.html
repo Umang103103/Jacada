@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacada-Travels</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--Swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/trips.css" />
+  </head>
+
+  <body>
+    <!--Topbar Section-->
+    <header>
+      <div class="topbar d-flex align-items-center">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- LEFT: Logo -->
+          <div class="topbar-logo">Jacada</div>
+
+          <!-- RIGHT: Desktop items (visible md and up) -->
+          <div class="d-none d-md-flex align-items-center gap-4 topbar-right">
+            <!-- Currency Selector (desktop only) -->
+            <div class="currency-selector">
+              <button class="currency-btn" type="button" aria-expanded="false">
+                <span class="currency-symbol">$</span>
+                <span class="currency-label">USD</span>
+                <span class="currency-caret" aria-hidden="true"></span>
+              </button>
+
+              <ul class="currency-list">
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">USD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">£</span>
+                  <span class="item-code">GBP</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">AUD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">CAD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">HKD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">SGD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">NZD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">¥</span>
+                  <span class="item-code">RMB</span>
+                </li>
+                <li>
+                  <span class="item-symbol">€</span>
+                  <span class="item-code">EUR</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CALL US (desktop only) -->
+            <div class="call-us text-end">
+              <div class="call-label">CALL US ON</div>
+              <a href="tel:6468958368" class="call-number">646-895-8368</a>
+            </div>
+          </div>
+          <!-- MOBILE RIGHT SIDE (visible below md) -->
+          <div class="mobile-icons d-flex d-md-none align-items-center">
+            <!-- SEARCH BUTTON (mobile only) -->
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
+
+            <span class="menu-text">MENU</span>
+
+            <!-- HAMBURGER -->
+            <button
+              class="navbar-toggler first-button d-md-none"
+              type="button"
+              aria-label="Toggle navigation"
+            >
+              <div class="animated-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+
+            <nav class="mobile-nav d-md-none" aria-hidden="true">
+              <!-- MAIN MENU -->
+              <div class="menu-panel active" data-panel="main">
+                <ul class="menu-list">
+                  <li>
+                    <button class="panel-link" data-target="destinations">
+                      Destinations <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="luxury-safaris">
+                      Luxury Safaris <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="trip-types">
+                      Trip Types <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="inspiration">
+                      Inspiration <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="positive-impact">
+                      Positive Impact <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="about-us">
+                      About Us <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li><a href="#">Start Planning</a></li>
+                </ul>
+              </div>
+
+              <!-- DESTINATIONS -->
+              <div class="menu-panel" data-panel="destinations">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Africa</a></li>
+                  <li><a href="#">Asia</a></li>
+                  <li><a href="#">Europe</a></li>
+                </ul>
+              </div>
+              <!-- Luxury safaris -->
+              <div class="menu-panel" data-panel="luxury-safaris">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Safari A</a></li>
+                  <li><a href="#">Safari B</a></li>
+                  <li><a href="#">Safari C</a></li>
+                </ul>
+              </div>
+              <!-- TRIP TYPES -->
+              <div class="menu-panel" data-panel="trip-types">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Honeymoon</a></li>
+                  <li><a href="#">Family</a></li>
+                </ul>
+              </div>
+              <!-- INSPIRATION -->
+              <div class="menu-panel" data-panel="inspiration">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Honeymoons</a></li>
+                  <li><a href="#">Family Travel</a></li>
+                  <li><a href="#">Luxury Escapes</a></li>
+                </ul>
+              </div>
+              <!-- POSITIVE IMPACT -->
+              <div class="menu-panel" data-panel="positive-impact">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">Communities</a></li>
+                  <li><a href="#">Conservation</a></li>
+                </ul>
+              </div>
+              <!-- ABOUT US -->
+              <div class="menu-panel" data-panel="about-us">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Our Story</a></li>
+                  <li><a href="#">Why Jacada</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--Navbar-->
+      <nav id="navbar" class="navigation d-none d-lg-block">
+        <div class="background"></div>
+
+        <div class="container position-relative">
+          <ul class="navbar-nav flex-row" id="menu-header-menu">
+            <!-- DESTINATIONS (WIDE) -->
+            <li class="nav-item wide menu-item-has-children">
+              <a class="nav-link">Destinations</a>
+
+              <ul class="sub-menu">
+                <!-- AFRICA -->
+                <li class="menu-item-has-children">
+                  <a>Africa</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Botswana Safaris</li>
+                    <li>Congo</li>
+                    <li>Kenya</li>
+                    <li>Madagascar</li>
+                    <li>Mauritius</li>
+                    <li>Morocco</li>
+                    <li>Mozambique</li>
+                    <li>Namibia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>South Africa</li>
+                    <li>Tanzania</li>
+                    <li>Uganda</li>
+                    <li>Zambia</li>
+                    <li>Zimbabwe</li>
+                  </ul>
+                </li>
+
+                <!-- ASIA -->
+                <li class="menu-item-has-children">
+                  <a>Asia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+                <!--Australasia-->
+                <li class="menu-item-has-children">
+                  <a>Australasia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Central Asia-->
+                <li class="menu-item-has-children">
+                  <a>Central Asia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Europe-->
+                <li class="menu-item-has-children">
+                  <a>Europe</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Indian Subcontinent-->
+                <li class="menu-item-has-children">
+                  <a>Indian Subcontinent</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Latin America-->
+                <li class="menu-item-has-children">
+                  <a>Latin America</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Middle East-->
+                <li class="menu-item-has-children">
+                  <a>Middle East</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Polar-->
+                <li class="menu-item-has-children">
+                  <a>Polar</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--South Pacific-->
+                <li class="menu-item-has-children">
+                  <a>South Pacific</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Luxury Safaris</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Trip Types</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Inspiration</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Positive Impact</a>
+              <ul class="sub-menu">
+                <li><a>Active & Adventure</a></li>
+                <li><a>Arts & Culture</a></li>
+                <li><a>Family Trips</a></li>
+                <li><a>Honeymoons</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">About Us</a>
+              <ul class="sub-menu">
+                <li><a>Our Story</a></li>
+                <li><a>Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
+            <a href="#" class="btn-start-planning"> Start Planning </a>
+          </div>
+        </div>
+      </nav>
+      <!--Search Overlay-->
+      <div
+        class="search-overlay"
+        id="searchOverlay"
+        style="
+          background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url('./images/search.jpg') center / cover no-repeat;
+        "
+      >
+        <div class="search-inner">
+          <div class="search-field">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" placeholder="Search..." autofocus />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HERO  SECTION -->
+    <section class="hero-video-section">
+      <!-- Background Video -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./images/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="container hero-content">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h1 class="hero-title">
+              Exceptional<br />
+              Journeys
+            </h1>
+
+            <p class="hero-subtitle">
+              Set off on remarkable, deeply personal trips planned by
+              award-winning specialists
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Trips Types-->
+    <section class="tour-section">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- LEFT FILTER SIDEBAR -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="filter-sidebar">
+              <div class="filter-count mb-3">
+                Currently showing all <strong>259</strong> adventures
+              </div>
+
+              <div class="filter-search mb-4">
+                <div class="position-relative">
+                  <i class="fas fa-search search-icon"></i>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search destinations or activities"
+                  />
+                </div>
+              </div>
+
+              <div class="filter-title mb-2">Filter by:</div>
+
+              <div class="accordion filter-accordion" id="filterAccordion">
+                <!-- ACTIVITY -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#activity"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="fas fa-hiking me-2"></i>
+                          <span>ACTIVITY</span>
+                        </div>
+                        <span class="filter-sub">Any activity</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="activity" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <div class="filter-option">
+                        <input type="checkbox" id="activity-hiking" />
+                        <label for="activity-hiking">Hiking</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="activity-cycling" />
+                        <label for="activity-cycling">Bicycling</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="activity-swimming" />
+                        <label for="activity-swimming">Swimming</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="activity-trekking" />
+                        <label for="activity-trekking">Trekking</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="activity-safari" />
+                        <label for="activity-safari">Safari</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- COUNTRY -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#country"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="far fa-map me-2"></i>
+                          <span>COUNTRY</span>
+                        </div>
+                        <span class="filter-sub">Anywhere</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="country" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-morocco" />
+                        <label for="country-morocco">Morocco</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-australia" />
+                        <label for="country-australia">Australia</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-nepal" />
+                        <label for="country-nepal">Nepal</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-indonesia" />
+                        <label for="country-indonesia">Indonesia</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-japan" />
+                        <label for="country-japan">Japan</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-china" />
+                        <label for="country-china">China</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-india" />
+                        <label for="country-india">India</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-france" />
+                        <label for="country-france">France</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-italy" />
+                        <label for="country-italy">Italy</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-spain" />
+                        <label for="country-spain">Spain</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-united-states" />
+                        <label for="country-united-states">United States</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-canada" />
+                        <label for="country-canada">Canada</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-thailand" />
+                        <label for="country-thailand">Thailand</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-vietnam" />
+                        <label for="country-vietnam">Vietnam</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-peru" />
+                        <label for="country-peru">Peru</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-brazil" />
+                        <label for="country-brazil">Brazil</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-argentina" />
+                        <label for="country-argentina">Argentina</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-south-africa" />
+                        <label for="country-south-africa">South Africa</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-egypt" />
+                        <label for="country-egypt">Egypt</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-kenya" />
+                        <label for="country-kenya">Kenya</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-tanzania" />
+                        <label for="country-tanzania">Tanzania</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-new-zealand" />
+                        <label for="country-new-zealand">New Zealand</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-sri-lanka" />
+                        <label for="country-sri-lanka">Sri Lanka</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-mexico" />
+                        <label for="country-mexico">Mexico</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="country-chile" />
+                        <label for="country-chile">Chile</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- DATE & DURATION -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#date"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="far fa-calendar me-2"></i>
+                          <span>DATE &amp; DURATION</span>
+                        </div>
+                        <span class="filter-sub">Anytime, any duration</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="date" class="accordion-collapse collapse">
+                    <div class="accordion-body date-duration-body">
+                      <!-- DATE -->
+                      <div class="filter-group">
+                        <div class="filter-group-title">DATE</div>
+
+                        <div class="select-wrapper">
+                          <select class="form-select">
+                            <option selected>Anytime</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <hr />
+
+                      <!-- DURATION -->
+                      <div class="filter-group">
+                        <div class="filter-group-title">DURATION</div>
+
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <div class="duration-label">Minimum Nights</div>
+                            <select class="form-select">
+                              <!-- 1 to 19 -->
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                            </select>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="duration-label">Maximum Nights</div>
+                            <select class="form-select">
+                              <!-- 1 to 19 -->
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- DIFFICULTY -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#difficulty"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="fas fa-mountain me-2"></i>
+                          <span>DIFFICULTY</span>
+                        </div>
+                        <span class="filter-sub">Any difficulty</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="difficulty" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <div class="filter-option">
+                        <input type="checkbox" id="difficulty-easy" />
+                        <label for="difficulty-easy">Easy</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="difficulty-moderate" />
+                        <label for="difficulty-moderate">Moderate</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="difficulty-challenging" />
+                        <label for="difficulty-challenging">Challenging</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="difficulty-tough" />
+                        <label for="difficulty-tough">Tough</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TRIP STYLE -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#style"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="fas fa-route me-2"></i>
+                          <span>TRIP STYLE</span>
+                        </div>
+                        <span class="filter-sub">Any trip style</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="style" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <div class="filter-option">
+                        <input type="checkbox" id="style-classic" />
+                        <label for="style-classic">Classic</label>
+                      </div>
+
+                      <div class="filter-option">
+                        <input type="checkbox" id="style-premium" />
+                        <label for="style-premium">Premium</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PRICE -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#price"
+                    >
+                      <div class="accordion-label">
+                        <div class="accordion-title">
+                          <i class="fas fa-tag me-2"></i>
+                          <span>PRICE &amp; PROMOTIONS</span>
+                        </div>
+                        <span class="filter-sub">Any price, any promotion</span>
+                      </div>
+                    </button>
+                  </h2>
+
+                  <div id="price" class="accordion-collapse collapse">
+                    <div class="accordion-body price-body">
+                      <!-- PRICE RANGE -->
+                      <div class="filter-group">
+                        <div class="filter-group-title">PRICE RANGE</div>
+
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <div class="duration-label">Minimum Price</div>
+                            <select class="form-select">
+                              <option selected>£0</option>
+                              <option>£500</option>
+                              <option>£1000</option>
+                              <option>£1500</option>
+                              <option>£2000</option>
+                              <option>£2500</option>
+                              <option>£3000</option>
+                              <option>£3500</option>
+                              <option>£4000</option>
+                              <option>£4500</option>
+                            </select>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="duration-label">Maximum Price</div>
+                            <select class="form-select">
+                              <option>£0</option>
+                              <option>£500</option>
+                              <option>£1000</option>
+                              <option>£1500</option>
+                              <option>£2000</option>
+                              <option>£2500</option>
+                              <option>£3000</option>
+                              <option>£3500</option>
+                              <option>£4000</option>
+                              <option selected>£4500</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr />
+
+                      <!-- PROMOTIONS -->
+                      <div class="filter-group">
+                        <div class="filter-group-title">PROMOTIONS</div>
+
+                        <div class="filter-option">
+                          <input type="checkbox" id="promo-2026-sale" />
+                          <label for="promo-2026-sale"> 2026 Sale </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT CARD AREA -->
+          <div class="col-lg-9">
+            <div class="row g-4">
+              <!-- CARD 1 -->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="morocco"
+                  data-activity="hiking"
+                  data-difficulty="moderate"
+                  data-style="classic"
+                  data-price="1359"
+                  data-days="9"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1548013146-72479768bada"
+                      alt=""
+                    />
+                    <span class="badge-top">Top Seller</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Morocco</div>
+
+                    <div class="tour-title">Journeys: Highlights Tour</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>9 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1699</span>
+                        <span class="discount">-20%</span>
+
+                        <div class="final-price">
+                          $1359 <span class="currency">USD</span>
+                        </div>
+
+                        <div class="date-text">on Feb 19, 2026</div>
+                      </div>
+
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="australia"
+                  data-activity="cycling"
+                  data-difficulty="easy"
+                  data-style="premium"
+                  data-price="1199"
+                  data-days="7"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                      alt=""
+                    />
+                    <span class="badge-top">Popular</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Australia</div>
+
+                    <div class="tour-title">Desert & Atlas Adventure</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>7 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1499</span>
+                        <span class="discount">-15%</span>
+
+                        <div class="final-price">
+                          $1199 <span class="currency">USD</span>
+                        </div>
+
+                        <div class="date-text">on Mar 10, 2026</div>
+                      </div>
+
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card 3-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="thailand"
+                  data-activity="swimming"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="899"
+                  data-days="5"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1505731132164-cca903b7a8f9"
+                      alt=""
+                    />
+                    <span class="badge-top">Relax</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Thailand</div>
+                    <div class="tour-title">Phuket Island Escape</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>5 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1099</span>
+                        <span class="discount">-18%</span>
+                        <div class="final-price">
+                          $899 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Jun 8, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card 4-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="france"
+                  data-activity="cycling"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="1499"
+                  data-days="7"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+                      alt=""
+                    />
+                    <span class="badge-top">Popular</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">France</div>
+                    <div class="tour-title">Provence Cycling Journey</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>7 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1699</span>
+                        <span class="discount">-12%</span>
+                        <div class="final-price">
+                          $1499 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Jul 2, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Card 5-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="peru"
+                  data-activity="trekking"
+                  data-difficulty="hard"
+                  data-style="classic"
+                  data-price="1799"
+                  data-days="9"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1526392060635-9d6019884377"
+                      alt=""
+                    />
+                    <span class="badge-top">Adventure</span>
+                    <span class="difficulty difficulty-hard">Hard</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Peru</div>
+                    <div class="tour-title">Inca Trail to Machu Picchu</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>9 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$2099</span>
+                        <span class="discount">-14%</span>
+                        <div class="final-price">
+                          $1799 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Aug 18, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Card 6-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="italy"
+                  data-activity="cycling"
+                  data-difficulty="moderate"
+                  data-style="classic"
+                  data-price="1599"
+                  data-days="8"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1526481280691-3d3c7c1b95a5"
+                      alt=""
+                    />
+                    <span class="badge-top">Scenic</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Italy</div>
+                    <div class="tour-title">Tuscany Cycling & Wine</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>8 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1899</span>
+                        <span class="discount">-16%</span>
+                        <div class="final-price">
+                          $1599 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Sep 6, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Card 7-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="egypt"
+                  data-activity="safari"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="1399"
+                  data-days="6"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee"
+                      alt=""
+                    />
+                    <span class="badge-top">Historic</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Egypt</div>
+                    <div class="tour-title">Nile & Desert Safari</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>6 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1599</span>
+                        <span class="discount">-13%</span>
+                        <div class="final-price">
+                          $1399 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Oct 12, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Card 8-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="canada"
+                  data-activity="hiking"
+                  data-difficulty="moderate"
+                  data-style="classic"
+                  data-price="1699"
+                  data-days="7"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1508264165352-258a6c3e4c47"
+                      alt=""
+                    />
+                    <span class="badge-top">Nature</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Canada</div>
+                    <div class="tour-title">Rocky Mountains Hiking</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>7 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1999</span>
+                        <span class="discount">-15%</span>
+                        <div class="final-price">
+                          $1699 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Jun 28, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 9-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="nepal"
+                  data-activity="trekking"
+                  data-difficulty="hard"
+                  data-style="classic"
+                  data-price="1299"
+                  data-days="10"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1518684079-48b1366a1d90"
+                      alt=""
+                    />
+                    <span class="badge-top">Adventure</span>
+                    <span class="difficulty difficulty-hard">Hard</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Nepal</div>
+
+                    <div class="tour-title">Himalayan High Pass Trek</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>10 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1600</span>
+                        <span class="discount">-18%</span>
+
+                        <div class="final-price">
+                          $1299 <span class="currency">USD</span>
+                        </div>
+
+                        <div class="date-text">on Apr 10, 2026</div>
+                      </div>
+
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--CARD 10-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="south africa"
+                  data-activity="safari"
+                  data-difficulty="moderate"
+                  data-style="premium"
+                  data-price="2299"
+                  data-days="9"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1516426122078-c23e76319801"
+                      alt=""
+                    />
+                    <span class="badge-top">Wildlife</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">South Africa</div>
+
+                    <div class="tour-title">Kruger Safari Experience</div>
+
+                    <div class="tour-meta">
+                      <i class="far fa-calendar-alt me-1"></i>
+                      <span>9 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$2599</span>
+                        <span class="discount">-12%</span>
+
+                        <div class="final-price">
+                          $2299 <span class="currency">USD</span>
+                        </div>
+
+                        <div class="date-text">on Sep 14, 2026</div>
+                      </div>
+
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CTA Bar-->
+    <div class="mobile-travel-cta" id="mobileTravelCTA">
+      <span class="cta-text">Where would you like to travel?</span>
+      <a href="#" class="cta-btn">Start Planning</a>
+    </div>
+
+    <!--Footer Section-->
+    <footer class="jacada-footer">
+      <div class="container">
+        <!-- TOP FOOTER -->
+        <div class="row gy-5">
+          <!-- NEWSLETTER -->
+          <div class="col-12 col-lg-4">
+            <h6 class="footer-title">
+              Receive Travel Inspiration in your Inbox
+            </h6>
+
+            <form class="footer-form">
+              <input type="text" placeholder="First Name*" />
+              <input type="text" placeholder="Last Name*" />
+              <input type="email" placeholder="Email*" />
+
+              <label class="footer-checkbox">
+                <input type="checkbox" />
+                I am happy to receive emails from Jacada, including travel
+                guides and information.*
+              </label>
+
+              <button type="submit" class="footer-btn">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- AWARDS (PLACEHOLDER) -->
+          <div class="col-12 col-lg-3">
+            <div class="award-wrapper">
+              <div class="award-placeholder">
+                <img src="./images/Footer-logo.png" alt="Award 1" />
+              </div>
+              <div class="award-placeholder">
+                <img src="./images/Footer-logo.png" alt="Award 2" />
+              </div>
+            </div>
+          </div>
+
+          <!-- DESTINATIONS -->
+          <div class="col-12 col-lg-2">
+            <h6 class="footer-title">Destinations</h6>
+            <ul class="footer-links">
+              <li>Africa</li>
+              <li>Asia</li>
+              <li>Australasia</li>
+              <li>Central Asia</li>
+              <li>Europe</li>
+              <li>Indian Subcontinent</li>
+              <li>Latin America</li>
+              <li>Middle East</li>
+              <li>Polar Regions</li>
+              <li>South Pacific</li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="col-12 col-lg-3">
+            <h6 class="footer-title">Get in Touch</h6>
+            <p class="footer-text fw-bold">646-895-8368</p>
+            <p class="footer-text">enquire@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Press Enquiries</h6>
+            <p class="footer-text">press@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Find us on</h6>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <h6 class="footer-title mt-4">Excellent</h6>
+            <div class="trustpilot-stars">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+            <p class="footer-small">based on 2,404 reviews</p>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="footer-divider" />
+
+        <!-- BOTTOM BAR -->
+        <div class="row align-items-center gy-3 footer-bottom">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <span class="footer-logo">Jacada</span>
+          </div>
+
+          <div class="col-12 col-lg-6 text-center text-lg-end footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <span>© Copyright 2010–2025 Jacada Travel</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/trips.js"></script>
+  </body>
+</html>

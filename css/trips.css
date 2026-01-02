@@ -1,0 +1,217 @@
+.tour-section {
+  padding: 70px 0;
+}
+/*Accordian Section */
+.filter-sidebar {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.filter-count {
+  font-size: 14px;
+}
+
+.filter-search input {
+  padding-left: 40px;
+  height: 45px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.filter-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-accordion .accordion-item {
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.filter-accordion .accordion-button {
+  background: #fff;
+  font-weight: 700;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-right: 45px;
+}
+
+.filter-accordion .accordion-button::after {
+  position: absolute;
+  right: 20px;
+}
+
+.filter-sub {
+  font-weight: 400;
+  font-size: 13px;
+  color: #777;
+  margin-left: auto; /* pushes it to the right */
+}
+
+.filter-accordion .accordion-body {
+  font-size: 14px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.filter-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-color); /* your gold/yellow */
+  cursor: pointer;
+}
+
+.filter-option label {
+  cursor: pointer;
+  color: #333;
+}
+
+/*Card Section */
+.tour-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.tour-image {
+  position: relative;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.badge-top {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ede9ff;
+  color: #5b3cc4;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.difficulty {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #ffffff;
+}
+
+.difficulty-easy {
+  color: #1b8a3c;
+  background: #e7f7ee;
+}
+
+.difficulty-moderate {
+  color: #b7791f;
+  background: #fff7e6;
+}
+
+.difficulty-hard {
+  color: #c53030;
+  background: #ffe5e5;
+}
+
+.tour-body {
+  padding: 20px;
+}
+
+.tour-provider {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.tour-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.tour-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.price-box {
+  margin-top: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #6c757d;
+  margin-right: 8px;
+}
+
+.discount {
+  background: #ffe5e5;
+  color: #e63946;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.final-price {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.currency {
+  font-size: 14px;
+}
+
+.date-text {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.view-btn {
+  background: #5b3cc4;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 10px 18px;
+  border: none;
+}
+.tour-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.tour-meta i {
+  color: var(--accent-color); /* or #d4af37 */
+}
