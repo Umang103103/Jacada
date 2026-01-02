@@ -571,7 +571,7 @@
           <aside class="col-lg-3 d-none d-lg-block">
             <div class="filter-sidebar">
               <div class="filter-count mb-3">
-                Currently showing all <strong>259</strong> adventures
+                Currently showing <strong id="resultCount">0</strong> adventures
               </div>
 
               <div class="filter-search mb-4">
@@ -579,6 +579,7 @@
                   <i class="fas fa-search search-icon"></i>
                   <input
                     type="text"
+                    id="searchInput"
                     class="form-control"
                     placeholder="Search destinations or activities"
                   />
@@ -609,27 +610,52 @@
                   <div id="activity" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <div class="filter-option">
-                        <input type="checkbox" id="activity-hiking" />
+                        <input
+                          type="checkbox"
+                          id="activity-hiking"
+                          class="filter-activity"
+                          value="hiking"
+                        />
                         <label for="activity-hiking">Hiking</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="activity-cycling" />
+                        <input
+                          type="checkbox"
+                          id="activity-cycling"
+                          class="filter-activity"
+                          value="cycling"
+                        />
                         <label for="activity-cycling">Bicycling</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="activity-swimming" />
+                        <input
+                          type="checkbox"
+                          id="activity-swimming"
+                          class="filter-activity"
+                          value="swimming"
+                        />
                         <label for="activity-swimming">Swimming</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="activity-trekking" />
+                        <input
+                          type="checkbox"
+                          id="activity-trekking"
+                          class="filter-activity"
+                          value="trekking"
+                        />
                         <label for="activity-trekking">Trekking</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="activity-safari" />
+                        <input
+                          type="checkbox"
+                          id="activity-safari"
+                          class="filter-activity"
+                          value="safari"
+                        />
                         <label for="activity-safari">Safari</label>
                       </div>
                     </div>
@@ -657,127 +683,252 @@
                   <div id="country" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <div class="filter-option">
-                        <input type="checkbox" id="country-morocco" />
+                        <input
+                          type="checkbox"
+                          id="country-morocco"
+                          class="filter-country"
+                          value="morocco"
+                        />
                         <label for="country-morocco">Morocco</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-australia" />
+                        <input
+                          type="checkbox"
+                          id="country-australia"
+                          class="filter-country"
+                          value="australia"
+                        />
                         <label for="country-australia">Australia</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-nepal" />
+                        <input
+                          type="checkbox"
+                          id="country-nepal"
+                          class="filter-country"
+                          value="nepal"
+                        />
                         <label for="country-nepal">Nepal</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-indonesia" />
+                        <input
+                          type="checkbox"
+                          id="country-indonesia"
+                          class="filter-country"
+                          value="indonesia"
+                        />
                         <label for="country-indonesia">Indonesia</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-japan" />
+                        <input
+                          type="checkbox"
+                          id="country-japan"
+                          class="filter-country"
+                          value="japan"
+                        />
                         <label for="country-japan">Japan</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-china" />
+                        <input
+                          type="checkbox"
+                          id="country-china"
+                          class="filter-country"
+                          value="china"
+                        />
                         <label for="country-china">China</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-india" />
+                        <input
+                          type="checkbox"
+                          id="country-india"
+                          class="filter-country"
+                          value="india"
+                        />
                         <label for="country-india">India</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-france" />
+                        <input
+                          type="checkbox"
+                          id="country-france"
+                          class="filter-country"
+                          value="france"
+                        />
                         <label for="country-france">France</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-italy" />
+                        <input
+                          type="checkbox"
+                          id="country-italy"
+                          class="filter-country"
+                          value="italy"
+                        />
                         <label for="country-italy">Italy</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-spain" />
+                        <input
+                          type="checkbox"
+                          id="country-spain"
+                          class="filter-country"
+                          value="spain"
+                        />
                         <label for="country-spain">Spain</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-united-states" />
+                        <input
+                          type="checkbox"
+                          id="country-united-states"
+                          class="filter-country"
+                          value="united states"
+                        />
                         <label for="country-united-states">United States</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-canada" />
+                        <input
+                          type="checkbox"
+                          id="country-canada"
+                          class="filter-country"
+                          value="canada"
+                        />
                         <label for="country-canada">Canada</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-thailand" />
+                        <input
+                          type="checkbox"
+                          id="country-thailand"
+                          class="filter-country"
+                          value="thailand"
+                        />
                         <label for="country-thailand">Thailand</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-vietnam" />
+                        <input
+                          type="checkbox"
+                          id="country-vietnam"
+                          class="filter-country"
+                          value="vietnam"
+                        />
                         <label for="country-vietnam">Vietnam</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-peru" />
+                        <input
+                          type="checkbox"
+                          id="country-peru"
+                          class="filter-country"
+                          value="peru"
+                        />
                         <label for="country-peru">Peru</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-brazil" />
+                        <input
+                          type="checkbox"
+                          id="country-brazil"
+                          class="filter-country"
+                          value="brazil"
+                        />
                         <label for="country-brazil">Brazil</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-argentina" />
+                        <input
+                          type="checkbox"
+                          id="country-argentina"
+                          class="filter-country"
+                          value="argentina"
+                        />
                         <label for="country-argentina">Argentina</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-south-africa" />
+                        <input
+                          type="checkbox"
+                          id="country-south-africa"
+                          class="filter-country"
+                          value="south africa"
+                        />
                         <label for="country-south-africa">South Africa</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-egypt" />
+                        <input
+                          type="checkbox"
+                          id="country-egypt"
+                          class="filter-country"
+                          value="egypt"
+                        />
                         <label for="country-egypt">Egypt</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-kenya" />
+                        <input
+                          type="checkbox"
+                          id="country-kenya"
+                          class="filter-country"
+                          value="kenya"
+                        />
                         <label for="country-kenya">Kenya</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-tanzania" />
+                        <input
+                          type="checkbox"
+                          id="country-tanzania"
+                          class="filter-country"
+                          value="tanzania"
+                        />
                         <label for="country-tanzania">Tanzania</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-new-zealand" />
+                        <input
+                          type="checkbox"
+                          id="country-new-zealand"
+                          class="filter-country"
+                          value="new zealand"
+                        />
                         <label for="country-new-zealand">New Zealand</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-sri-lanka" />
+                        <input
+                          type="checkbox"
+                          id="country-sri-lanka"
+                          class="filter-country"
+                          value="sri lanka"
+                        />
                         <label for="country-sri-lanka">Sri Lanka</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-mexico" />
+                        <input
+                          type="checkbox"
+                          id="country-mexico"
+                          class="filter-country"
+                          value="mexico"
+                        />
                         <label for="country-mexico">Mexico</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="country-chile" />
+                        <input
+                          type="checkbox"
+                          id="country-chile"
+                          class="filter-country"
+                          value="chile"
+                        />
                         <label for="country-chile">Chile</label>
                       </div>
                     </div>
@@ -912,22 +1063,42 @@
                   <div id="difficulty" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <div class="filter-option">
-                        <input type="checkbox" id="difficulty-easy" />
+                        <input
+                          type="checkbox"
+                          id="difficulty-easy"
+                          class="filter-difficulty"
+                          value="easy"
+                        />
                         <label for="difficulty-easy">Easy</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="difficulty-moderate" />
+                        <input
+                          type="checkbox"
+                          id="difficulty-moderate"
+                          class="filter-difficulty"
+                          value="moderate"
+                        />
                         <label for="difficulty-moderate">Moderate</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="difficulty-challenging" />
+                        <input
+                          type="checkbox"
+                          id="difficulty-challenging"
+                          class="filter-difficulty"
+                          value="challenging"
+                        />
                         <label for="difficulty-challenging">Challenging</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="difficulty-tough" />
+                        <input
+                          type="checkbox"
+                          id="difficulty-tough"
+                          class="filter-difficulty"
+                          value="tough"
+                        />
                         <label for="difficulty-tough">Tough</label>
                       </div>
                     </div>
@@ -955,12 +1126,22 @@
                   <div id="style" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       <div class="filter-option">
-                        <input type="checkbox" id="style-classic" />
+                        <input
+                          type="checkbox"
+                          id="style-classic"
+                          class="filter-style"
+                          value="classic"
+                        />
                         <label for="style-classic">Classic</label>
                       </div>
 
                       <div class="filter-option">
-                        <input type="checkbox" id="style-premium" />
+                        <input
+                          type="checkbox"
+                          id="style-premium"
+                          class="filter-style"
+                          value="premium"
+                        />
                         <label for="style-premium">Premium</label>
                       </div>
                     </div>
@@ -994,33 +1175,33 @@
                         <div class="row g-2">
                           <div class="col-6">
                             <div class="duration-label">Minimum Price</div>
-                            <select class="form-select">
-                              <option selected>£0</option>
-                              <option>£500</option>
-                              <option>£1000</option>
-                              <option>£1500</option>
-                              <option>£2000</option>
-                              <option>£2500</option>
-                              <option>£3000</option>
-                              <option>£3500</option>
-                              <option>£4000</option>
-                              <option>£4500</option>
+                            <select class="form-select" id="minPrice">
+                              <option value="0" selected>£0</option>
+                              <option value="500">£500</option>
+                              <option value="1000">£1000</option>
+                              <option value="1500">£1500</option>
+                              <option value="2000">£2000</option>
+                              <option value="2500">£2500</option>
+                              <option value="3000">£3000</option>
+                              <option value="3500">£3500</option>
+                              <option value="4000">£4000</option>
+                              <option value="4500">£4500</option>
                             </select>
                           </div>
 
                           <div class="col-6">
                             <div class="duration-label">Maximum Price</div>
-                            <select class="form-select">
-                              <option>£0</option>
-                              <option>£500</option>
-                              <option>£1000</option>
-                              <option>£1500</option>
-                              <option>£2000</option>
-                              <option>£2500</option>
-                              <option>£3000</option>
-                              <option>£3500</option>
-                              <option>£4000</option>
-                              <option selected>£4500</option>
+                            <select class="form-select" id="maxPrice">
+                              <option value="0">£0</option>
+                              <option value="500">£500</option>
+                              <option value="1000">£1000</option>
+                              <option value="1500">£1500</option>
+                              <option value="2000">£2000</option>
+                              <option value="2500">£2500</option>
+                              <option value="3000">£3000</option>
+                              <option value="3500">£3500</option>
+                              <option value="4000">£4000</option>
+                              <option value="4500" selected>£4500</option>
                             </select>
                           </div>
                         </div>
@@ -1033,8 +1214,13 @@
                         <div class="filter-group-title">PROMOTIONS</div>
 
                         <div class="filter-option">
-                          <input type="checkbox" id="promo-2026-sale" />
-                          <label for="promo-2026-sale"> 2026 Sale </label>
+                          <input
+                            type="checkbox"
+                            id="promo-2026-sale"
+                            class="filter-promo"
+                            value="2026-sale"
+                          />
+                          <label for="promo-2026-sale">2026 Sale</label>
                         </div>
                       </div>
                     </div>

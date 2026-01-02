@@ -1,6 +1,7 @@
 .tour-section {
   padding: 70px 0;
 }
+
 /*Accordian Section */
 .filter-sidebar {
   background: #f7f7f7;
@@ -17,12 +18,13 @@
   height: 45px;
 }
 
-.search-icon {
+.filter-sidebar .filter-search .search-icon {
   position: absolute;
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
   color: #888;
+  pointer-events: none;
 }
 
 .filter-title {
