@@ -571,7 +571,8 @@
           <aside class="col-lg-3 d-none d-lg-block">
             <div class="filter-sidebar">
               <div class="filter-count mb-3">
-                Currently showing <strong id="resultCount">0</strong> adventures
+                Currently showing
+                <strong id="resultCount">0</strong> adventures
               </div>
 
               <div class="filter-search mb-4">
@@ -960,20 +961,23 @@
                         <div class="filter-group-title">DATE</div>
 
                         <div class="select-wrapper">
-                          <select class="form-select">
-                            <option selected>Anytime</option>
-                            <option>January</option>
-                            <option>February</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>May</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>October</option>
-                            <option>November</option>
-                            <option>December</option>
+                          <select
+                            class="form-select filter-month"
+                            id="filterMonth"
+                          >
+                            <option value="">Anytime</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
                           </select>
                         </div>
                       </div>
@@ -987,7 +991,7 @@
                         <div class="row g-2">
                           <div class="col-6">
                             <div class="duration-label">Minimum Nights</div>
-                            <select class="form-select">
+                            <select class="form-select" id="minDays">
                               <!-- 1 to 19 -->
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -1013,7 +1017,7 @@
 
                           <div class="col-6">
                             <div class="duration-label">Maximum Nights</div>
-                            <select class="form-select">
+                            <select class="form-select" id="maxDays">
                               <!-- 1 to 19 -->
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -1243,6 +1247,7 @@
                   data-style="classic"
                   data-price="1359"
                   data-days="9"
+                  data-month="february"
                 >
                   <div class="tour-image">
                     <img
@@ -1294,6 +1299,7 @@
                   data-style="premium"
                   data-price="1199"
                   data-days="7"
+                  data-month="March"
                 >
                   <div class="tour-image">
                     <img
@@ -1344,6 +1350,7 @@
                   data-style="classic"
                   data-price="899"
                   data-days="5"
+                  data-month="June"
                 >
                   <div class="tour-image">
                     <img
@@ -1390,6 +1397,7 @@
                   data-style="classic"
                   data-price="1499"
                   data-days="7"
+                  data-month="July"
                 >
                   <div class="tour-image">
                     <img
@@ -1437,6 +1445,7 @@
                   data-style="classic"
                   data-price="1799"
                   data-days="9"
+                  data-month="August"
                 >
                   <div class="tour-image">
                     <img
@@ -1484,6 +1493,7 @@
                   data-style="classic"
                   data-price="1599"
                   data-days="8"
+                  data-month="September"
                 >
                   <div class="tour-image">
                     <img
@@ -1531,6 +1541,7 @@
                   data-style="classic"
                   data-price="1399"
                   data-days="6"
+                  data-month="October"
                 >
                   <div class="tour-image">
                     <img
@@ -1578,6 +1589,7 @@
                   data-style="classic"
                   data-price="1699"
                   data-days="7"
+                  data-month="June"
                 >
                   <div class="tour-image">
                     <img
@@ -1625,6 +1637,7 @@
                   data-style="classic"
                   data-price="1299"
                   data-days="10"
+                  data-month="April"
                 >
                   <div class="tour-image">
                     <img
@@ -1675,6 +1688,7 @@
                   data-style="premium"
                   data-price="2299"
                   data-days="9"
+                  data-month="September"
                 >
                   <div class="tour-image">
                     <img
@@ -1710,6 +1724,514 @@
                         <div class="date-text">on Sep 14, 2026</div>
                       </div>
 
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--CARD 11-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="morocco"
+                  data-activity="culture"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="1359"
+                  data-days="9"
+                  data-month="february"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1548013146-72479768bada"
+                      alt=""
+                    />
+                    <span class="badge-top">Top Seller</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Morocco</div>
+                    <div class="tour-title">
+                      Journeys: Highlights of Morocco
+                    </div>
+
+                    <div class="tour-meta">
+                      <span>9 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1699</span>
+                        <span class="discount">-20%</span>
+                        <div class="final-price">
+                          $1359 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Feb 19, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 12-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="nepal"
+                  data-activity="trekking"
+                  data-difficulty="hard"
+                  data-style="adventure"
+                  data-price="1299"
+                  data-days="10"
+                  data-month="April"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1518684079-48b1366a1d90"
+                      alt=""
+                    />
+                    <span class="badge-top">Adventure</span>
+                    <span class="difficulty difficulty-hard">Hard</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Nepal</div>
+                    <div class="tour-title">Journeys: Discover Nepal</div>
+
+                    <div class="tour-meta">
+                      <span>10 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$1600</span>
+                        <span class="discount">-18%</span>
+                        <div class="final-price">
+                          $1299 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Apr 10, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 13-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="costa rica"
+                  data-activity="nature"
+                  data-difficulty="easy"
+                  data-style="eco"
+                  data-price="2499"
+                  data-days="9"
+                  data-month="May"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1502082553048-f009c37129b9"
+                      alt=""
+                    />
+                    <span class="badge-top">Nature</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Costa Rica</div>
+                    <div class="tour-title">
+                      Journeys: Highlights of Costa Rica
+                    </div>
+
+                    <div class="tour-meta">
+                      <span>9 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $2499 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on May 2, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 14-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="peru"
+                  data-activity="culture"
+                  data-difficulty="moderate"
+                  data-style="classic"
+                  data-price="1999"
+                  data-days="8"
+                  data-month="January"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1"
+                      alt=""
+                    />
+                    <span class="badge-top">Historic</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Peru</div>
+                    <div class="tour-title">Journeys: Explore Machu Picchu</div>
+
+                    <div class="tour-meta">
+                      <span>8 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$2499</span>
+                        <span class="discount">-20%</span>
+                        <div class="final-price">
+                          $1999 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Jan 24, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 15-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="japan"
+                  data-activity="culture"
+                  data-difficulty="easy"
+                  data-style="premium"
+                  data-price="2899"
+                  data-days="10"
+                  data-month="March"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1549693578-d683be217e58"
+                      alt=""
+                    />
+                    <span class="badge-top">Cultural</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Japan</div>
+                    <div class="tour-title">Journeys: Discover Japan</div>
+
+                    <div class="tour-meta">
+                      <span>10 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $2899 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Mar 18, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 16-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="iceland"
+                  data-activity="nature"
+                  data-difficulty="moderate"
+                  data-style="adventure"
+                  data-price="3199"
+                  data-days="8"
+                  data-month="January"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                      alt=""
+                    />
+                    <span class="badge-top">Nature</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Iceland</div>
+                    <div class="tour-title">Journeys: Explore Iceland</div>
+
+                    <div class="tour-meta">
+                      <span>8 days</span>
+                      <span>1 destination</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $3199 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Jun 6, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 17-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="italy"
+                  data-activity="culture"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="2399"
+                  data-days="9"
+                  data-month="May"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1526481280691-3d3d0c3b8f31"
+                      alt=""
+                    />
+                    <span class="badge-top">Cultural</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Italy</div>
+                    <div class="tour-title">Journeys: Highlights of Italy</div>
+
+                    <div class="tour-meta">
+                      <span>9 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="old-price">$2699</span>
+                        <span class="discount">-11%</span>
+                        <div class="final-price">
+                          $2399 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on May 12, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 18-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="vietnam"
+                  data-activity="culture"
+                  data-difficulty="easy"
+                  data-style="classic"
+                  data-price="1899"
+                  data-days="10"
+                  data-month="March"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d"
+                      alt=""
+                    />
+                    <span class="badge-top">Culture</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Vietnam</div>
+                    <div class="tour-title">
+                      Journeys: Highlights of Vietnam
+                    </div>
+
+                    <div class="tour-meta">
+                      <span>10 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $1899 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Mar 22, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 19-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="sri lanka"
+                  data-activity="nature"
+                  data-difficulty="easy"
+                  data-style="eco"
+                  data-price="1799"
+                  data-days="8"
+                  data-month="April"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1589308078056-f7d2c6d7c9c0"
+                      alt=""
+                    />
+                    <span class="badge-top">Nature</span>
+                    <span class="difficulty difficulty-easy">Easy</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Sri Lanka</div>
+                    <div class="tour-title">Journeys: Discover Sri Lanka</div>
+
+                    <div class="tour-meta">
+                      <span>8 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $1799 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Apr 6, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 20-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="kenya"
+                  data-activity="safari"
+                  data-difficulty="moderate"
+                  data-style="premium"
+                  data-price="2899"
+                  data-days="9"
+                  data-month="August"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e"
+                      alt=""
+                    />
+                    <span class="badge-top">Safari</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">Kenya</div>
+                    <div class="tour-title">Journeys: Highlights of Kenya</div>
+
+                    <div class="tour-meta">
+                      <span>9 days</span>
+                      <span>2 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $2899 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Aug 3, 2026</div>
+                      </div>
+                      <button class="view-btn">View tour</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CARD 21-->
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="tour-card"
+                  data-country="new zealand"
+                  data-activity="adventure"
+                  data-difficulty="moderate"
+                  data-style="adventure"
+                  data-price="3399"
+                  data-days="11"
+                  data-month="November"
+                >
+                  <div class="tour-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1502786129293-79981df4e689"
+                      alt=""
+                    />
+                    <span class="badge-top">Adventure</span>
+                    <span class="difficulty difficulty-moderate">Moderate</span>
+                  </div>
+
+                  <div class="tour-body">
+                    <div class="tour-country">New Zealand</div>
+                    <div class="tour-title">Journeys: Discover New Zealand</div>
+
+                    <div class="tour-meta">
+                      <span>11 days</span>
+                      <span>3 destinations</span>
+                    </div>
+
+                    <div
+                      class="price-box d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="final-price">
+                          $3399 <span class="currency">USD</span>
+                        </div>
+                        <div class="date-text">on Nov 9, 2026</div>
+                      </div>
                       <button class="view-btn">View tour</button>
                     </div>
                   </div>

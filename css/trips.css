@@ -87,6 +87,37 @@
   color: #333;
 }
 
+/* Column becomes sticky boundary */
+.filter-column {
+  position: relative;
+  display: flex;
+  align-items: flex-start; /* CRITICAL */
+}
+
+/* Sidebar behavior */
+.filter-sidebar {
+  position: sticky;
+  top: 90px; /* adjust for navbar height */
+  width: 100%;
+  box-sizing: border-box;
+
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Internal scroll only */
+.filter-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.filter-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
 /*Card Section */
 .tour-card {
   border-radius: 20px;
