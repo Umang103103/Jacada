@@ -97,10 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput?.addEventListener("keyup", filterCards);
 
-  filterCards(); // initial render
+  filterCards();
 });
-
-//Clear All
 
 //left aside accordian
 
@@ -111,11 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!sidebar || !aside || !cards) return;
 
-  const topOffset = 65; // must match CSS top
+  const topOffset = 65;
 
-  /* -----------------------------------
-     Lock sidebar width (fixes fixed jump)
-  ----------------------------------- */
   function lockWidth() {
     sidebar.style.width = aside.offsetWidth + "px";
   }
@@ -123,9 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
   lockWidth();
   window.addEventListener("resize", lockWidth);
 
-  /* -----------------------------------
-     MAIN STICKY LOGIC
-  ----------------------------------- */
   function handleSidebarScroll() {
     const sidebarHeight = sidebar.offsetHeight;
     const cardsHeight = cards.offsetHeight;
@@ -134,9 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardsBottom = cards.offsetTop + cardsHeight;
     const scrollY = window.scrollY;
 
-    /* 🟢 CASE 1: NOT ENOUGH CARDS
-       → Sidebar should scroll normally
-    */
     if (cardsHeight <= sidebarHeight) {
       sidebar.classList.remove("is-fixed", "is-bottom");
       sidebar.classList.add("is-normal");
@@ -148,31 +137,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const startStick = asideTop - topOffset;
     const stopStick = cardsBottom - sidebarHeight - topOffset;
 
-    /* 🟢 CASE 2: STICKY ZONE */
     if (scrollY > startStick && scrollY < stopStick) {
       sidebar.classList.add("is-fixed");
       sidebar.classList.remove("is-bottom");
     } else if (scrollY >= stopStick) {
-      /* 🟢 CASE 3: BOTTOM REACHED */
       sidebar.classList.remove("is-fixed");
       sidebar.classList.add("is-bottom");
     } else {
-      /* 🟢 CASE 4: ABOVE STICKY */
       sidebar.classList.remove("is-fixed", "is-bottom");
       sidebar.classList.add("is-normal");
     }
   }
 
-  /* -----------------------------------
-     EVENTS
-  ----------------------------------- */
   window.addEventListener("scroll", handleSidebarScroll);
   window.addEventListener("load", handleSidebarScroll);
 
-  /* -----------------------------------
-     🔑 PUBLIC METHOD
-     Call this AFTER filtering cards
-  ----------------------------------- */
   window.recalculateSidebar = function () {
     requestAnimationFrame(() => {
       lockWidth();
