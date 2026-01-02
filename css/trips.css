@@ -20,7 +20,7 @@
 
 .filter-sidebar .filter-search .search-icon {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 14px;
   transform: translateY(-50%);
   color: #888;
@@ -86,36 +86,60 @@
   cursor: pointer;
   color: #333;
 }
-
-/* Column becomes sticky boundary */
-.filter-column {
-  position: relative;
-  display: flex;
-  align-items: flex-start; /* CRITICAL */
-}
-
-/* Sidebar behavior */
 .filter-sidebar {
-  position: sticky;
-  top: 90px; /* adjust for navbar height */
   width: 100%;
-  box-sizing: border-box;
-
-  max-height: calc(100vh - 110px);
-  overflow-y: auto;
-
-  background: #f7f7f7;
-  padding: 20px;
-  border-radius: 12px;
 }
 
-/* Internal scroll only */
+/* Sticky */
+#filterAside {
+  position: relative;
+}
+.filter-sidebar.is-normal {
+  position: static;
+}
+.filter-sidebar {
+  max-height: calc(100vh - 65px);
+  overflow-y: auto;
+}
+.filter-sidebar {
+  scrollbar-width: thin;
+}
+
+.filter-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.filter-sidebar {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.filter-sidebar.is-fixed {
+  position: fixed;
+  top: 65px;
+}
+
+/* Stop at bottom of cards */
+.filter-sidebar.is-bottom {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+}
+
 .filter-sidebar::-webkit-scrollbar {
   width: 6px;
 }
 .filter-sidebar::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.filter-clear button {
+  font-size: 14px;
+  color: #888;
+}
+
+.filter-clear button:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 /*Card Section */
@@ -247,4 +271,9 @@
 
 .tour-meta i {
   color: var(--accent-color); /* or #d4af37 */
+}
+@media (min-width: 992px) {
+  #cardsColumn {
+    padding-left: 30px;
+  }
 }

@@ -568,8 +568,8 @@
       <div class="container-fluid">
         <div class="row">
           <!-- LEFT FILTER SIDEBAR -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="filter-sidebar">
+          <aside class="col-lg-3 d-none d-lg-block" id="filterAside">
+            <div class="filter-sidebar" id="filterSidebar">
               <div class="filter-count mb-3">
                 Currently showing
                 <strong id="resultCount">0</strong> adventures
@@ -584,6 +584,15 @@
                     class="form-control"
                     placeholder="Search destinations or activities"
                   />
+                  <div class="filter-clear text-end mt-2">
+                    <button
+                      type="button"
+                      id="clearFilters"
+                      class="btn btn-link p-0 text-decoration-none"
+                    >
+                      Clear all filters
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -965,7 +974,7 @@
                             class="form-select filter-month"
                             id="filterMonth"
                           >
-                            <option value="">Anytime</option>
+                            <option value="" selected>Anytime</option>
                             <option value="january">January</option>
                             <option value="february">February</option>
                             <option value="march">March</option>
@@ -993,6 +1002,8 @@
                             <div class="duration-label">Minimum Nights</div>
                             <select class="form-select" id="minDays">
                               <!-- 1 to 19 -->
+                              <option value="" selected>Any</option>
+
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -1019,6 +1030,8 @@
                             <div class="duration-label">Maximum Nights</div>
                             <select class="form-select" id="maxDays">
                               <!-- 1 to 19 -->
+                              <option value="" selected>Any</option>
+
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -1235,7 +1248,7 @@
           </aside>
 
           <!-- RIGHT CARD AREA -->
-          <div class="col-lg-9">
+          <div class="col-lg-9" id="cardsColumn">
             <div class="row g-4">
               <!-- CARD 1 -->
               <div class="col-xl-4 col-md-6">
