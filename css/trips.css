@@ -349,4 +349,28 @@
   .filter-search {
     display: none !important;
   }
+  .filter-accordion .accordion-button {
+    background: #f7f7f7;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 45px;
+  }
+  .filter-sidebar {
+    background: none !important;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .filter-title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .filter-sidebar {
+    position: static !important;
+    max-height: none;
+    width: 21.5rem !important;
+    padding-top: 0px !important;
+  }
 }
