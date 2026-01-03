@@ -1249,6 +1249,26 @@
 
           <!-- RIGHT CARD AREA -->
           <div class="col-lg-9" id="cardsColumn">
+            <!-- MOBILE TOP BAR -->
+            <div class="mobile-top-bar d-lg-none mb-3">
+              <div class="mobile-result-count mb-2">
+                Currently showing
+                <strong id="mobileResultCount">0</strong> adventures
+              </div>
+
+              <div class="mobile-search-filter d-flex gap-2">
+                <div class="mobile-search flex-grow-1"></div>
+
+                <button
+                  id="openFilters"
+                  class="btn btn-success d-flex align-items-center gap-2"
+                >
+                  <i class="fas fa-sliders-h"></i>
+                  Filters
+                </button>
+              </div>
+            </div>
+
             <div class="row g-4">
               <!-- CARD 1 -->
               <div class="col-xl-4 col-md-6">
@@ -2252,6 +2272,18 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="mobileFilterOverlay"></div>
+
+      <div id="mobileFilterPanel">
+        <div class="mobile-filter-header">
+          <span>Filters</span>
+          <button id="closeFilters">&times;</button>
+        </div>
+
+        <div class="mobile-filter-body">
+          <!-- Sidebar will be MOVED here on mobile -->
         </div>
       </div>
     </section>

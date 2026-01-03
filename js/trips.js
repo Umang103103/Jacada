@@ -162,3 +162,82 @@ document.addEventListener("DOMContentLoaded", () => {
   /* Initial run */
   handleSidebarScroll();
 });
+
+//mobile panel filter
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openFilters");
+  const closeBtn = document.getElementById("closeFilters");
+  const panel = document.getElementById("mobileFilterPanel");
+  const overlay = document.getElementById("mobileFilterOverlay");
+  const sidebar = document.getElementById("filterSidebar");
+  const mobileBody = document.querySelector(".mobile-filter-body");
+  const aside = document.getElementById("filterAside");
+
+  if (!openBtn || !sidebar) return;
+
+  function moveSidebarToMobile() {
+    if (window.innerWidth < 992) {
+      if (!mobileBody.contains(sidebar)) {
+        mobileBody.appendChild(sidebar);
+      }
+    } else {
+      if (!aside.contains(sidebar)) {
+        aside.appendChild(sidebar);
+      }
+      panel.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  }
+
+  openBtn.addEventListener("click", () => {
+    panel.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    panel.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    panel.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  window.addEventListener("resize", moveSidebarToMobile);
+
+  moveSidebarToMobile();
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const mobileSearchSlot = document.querySelector(".mobile-search");
+  const desktopSearchWrapper = document.querySelector(".filter-search");
+  const resultCount = document.getElementById("resultCount");
+  const mobileResultCount = document.getElementById("mobileResultCount");
+
+  function handleMobileLayout() {
+    if (window.innerWidth < 992) {
+      if (
+        searchInput &&
+        mobileSearchSlot &&
+        !mobileSearchSlot.contains(searchInput)
+      ) {
+        mobileSearchSlot.appendChild(searchInput);
+      }
+    } else {
+      if (desktopSearchWrapper && !desktopSearchWrapper.contains(searchInput)) {
+        desktopSearchWrapper
+          .querySelector(".position-relative")
+          .appendChild(searchInput);
+      }
+    }
+
+    // Sync result count
+    if (resultCount && mobileResultCount) {
+      mobileResultCount.textContent = resultCount.textContent;
+    }
+  }
+
+  window.addEventListener("resize", handleMobileLayout);
+  handleMobileLayout();
+});
