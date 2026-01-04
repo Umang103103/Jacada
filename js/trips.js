@@ -267,3 +267,14 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", handleMobileLayout);
   handleMobileLayout();
 });
+//mobile filter
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileClearBtn = document.getElementById("mobileClearFilters");
+  const desktopClearBtn = document.getElementById("clearFilters");
+
+  if (!mobileClearBtn || !desktopClearBtn) return;
+
+  mobileClearBtn.addEventListener("click", () => {
+    desktopClearBtn.click(); // 🔥 reuse desktop logic
+  });
+});
