@@ -12,6 +12,32 @@ document.addEventListener("DOMContentLoaded", () => {
       el.value.trim().toLowerCase()
     );
 
+  const clearBtn = document.getElementById("clearFilters");
+
+  clearBtn?.addEventListener("click", () => {
+    // 1. Clear search
+    if (searchInput) searchInput.value = "";
+
+    // 2. Uncheck all checkboxes
+    document
+      .querySelectorAll("input[type='checkbox']")
+      .forEach((cb) => (cb.checked = false));
+
+    // 3. Reset selects EXCEPT price
+    document.querySelectorAll("select").forEach((select) => {
+      if (select.id === "minPrice") {
+        select.value = "0"; // default min
+      } else if (select.id === "maxPrice") {
+        select.value = "4500"; // default max
+      } else {
+        select.selectedIndex = 0;
+      }
+    });
+
+    // 4. Run filter again
+    filterCards();
+  });
+
   function filterCards() {
     const searchText = searchInput?.value.trim().toLowerCase() || "";
 
