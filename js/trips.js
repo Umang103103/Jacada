@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".tour-card");
   const searchInput = document.getElementById("searchInput");
   const resultCountEl = document.getElementById("resultCount");
+  const mobileResultCount = document.getElementById("mobileResultCount");
 
   const monthSelect = document.getElementById("filterMonth");
   const minDaysSelect = document.getElementById("minDays");
@@ -110,6 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (resultCountEl) {
       resultCountEl.textContent = visibleCount;
+    }
+
+    if (mobileResultCount) {
+      mobileResultCount.textContent = visibleCount;
     }
 
     if (window.recalculateSidebar) {
