@@ -192,7 +192,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Initial run */
   handleSidebarScroll();
+  window.addEventListener("load", () => {
+    sidebar.style.visibility = "visible";
+    lockWidth();
+    handleSidebarScroll();
+  });
 });
+//breakpoints
+(function () {
+  let wasMobile = window.innerWidth < 992;
+
+  window.addEventListener("resize", () => {
+    const isMobile = window.innerWidth < 992;
+
+    // Only run when crossing breakpoint
+    if (wasMobile !== isMobile) {
+      if (window.recalculateSidebar) {
+        window.recalculateSidebar();
+      }
+    }
+
+    wasMobile = isMobile;
+  });
+})();
 
 //mobile panel filter
 document.addEventListener("DOMContentLoaded", () => {

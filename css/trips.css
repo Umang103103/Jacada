@@ -7,6 +7,12 @@
   background: #f7f7f7;
   padding: 20px;
   border-radius: 12px;
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.filter-sidebar.is-fixed {
+  left: auto;
+  right: auto;
 }
 
 .filter-count {
@@ -20,11 +26,14 @@
 
 .filter-sidebar .filter-search .search-icon {
   position: absolute;
-  top: 30%;
   left: 14px;
+  top: 50%;
   transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
   color: #888;
   pointer-events: none;
+  padding-bottom: 30px;
 }
 
 .filter-title {
@@ -93,6 +102,7 @@
 /* Sticky */
 #filterAside {
   position: relative;
+  overflow: hidden;
 }
 .filter-sidebar.is-normal {
   position: static;
@@ -109,10 +119,12 @@
   width: 5px;
 }
 .filter-sidebar {
-  will-change: transform;
-  backface-visibility: hidden;
+  transform: translateZ(0);
 }
-
+.filter-sidebar.is-fixed {
+  left: auto;
+  right: auto;
+}
 .filter-sidebar.is-fixed {
   position: fixed;
   top: 65px;
@@ -336,6 +348,10 @@
 /* Make search input fit nicely */
 .mobile-search .form-control {
   height: 44px;
+}
+#filterAside {
+  position: relative;
+  overflow: hidden;
 }
 
 /* Disable sticky behavior on mobile */
