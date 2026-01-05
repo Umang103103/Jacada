@@ -1255,7 +1255,11 @@ ul {
   margin: 0;
 }
 
-.destinations-list li {
+.destinations-list li:hover {
+  color: #000;
+}
+.destinations-list li a {
+  text-decoration: none;
   font-family: serif;
   font-size: 42px;
   line-height: 1.25;
@@ -1264,7 +1268,7 @@ ul {
   transition: color 0.25s ease;
 }
 
-.destinations-list li:hover {
+.destinations-list li a:hover {
   color: #000;
 }
 
