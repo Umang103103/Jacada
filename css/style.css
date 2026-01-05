@@ -1255,9 +1255,6 @@ ul {
   margin: 0;
 }
 
-.destinations-list li:hover {
-  color: #000;
-}
 .destinations-list li a {
   text-decoration: none;
   font-family: serif;
@@ -1272,7 +1269,13 @@ ul {
   color: #000;
 }
 
+/*Moblie Responsive*/
 @media (max-width: 992px) {
+  .destinations-image {
+    display: none;
+  }
+
+  /* Grid layout */
   .destinations-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1281,14 +1284,14 @@ ul {
   .destinations-list li {
     font-size: 32px;
   }
-}
-/*Moblie Responsive*/
-@media (max-width: 992px) {
-  .destinations-image {
-    display: none;
+  .destinations-list li a {
+    text-decoration: none;
+    font-family: serif;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #fff;
+    cursor: pointer;
   }
-
-  /* Grid layout */
   .destinations-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1329,18 +1332,18 @@ ul {
     transition: opacity 0.5s ease-in-out;
   }
 
-  .destination-title {
+  .destination-title,
+  .destinations-list li a {
     position: relative;
     z-index: 2;
 
-    color: #fff;
-    font-family: serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
+    color: #fff !important;
+    opacity: 1;
 
     mix-blend-mode: normal;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: none; /* 🔥 remove shadow */
   }
+
   .destinations-eyebrow {
     color: #000;
     margin: 0rem auto 1.5rem;
