@@ -868,3 +868,111 @@
 .custom-button:hover {
   background-color: #dc3545 !important;
 }
+
+/* ================================
+    Essential trip – SECTION
+    ================================= */
+.essential-trip-section {
+  background-color: #fff;
+}
+
+.essential-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 50px 60px;
+}
+
+.essential-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.essential-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+.essential-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.essential-actions .btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.essential-actions .btn-outline-primary {
+  background-color: #fff;
+  border-color: #2d1a60;
+  color: #2d1a60;
+}
+
+.essential-actions .btn-danger {
+  background-color: #ff2f5b;
+  border-color: #ff2f5b;
+}
+
+/*================================
+    Still have questions? – SECTION
+    ================================= */
+.question-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 60px 20px;
+}
+
+.avatar-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 -10px;
+  border: 3px solid #fff;
+}
+
+.avatar-main {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.question-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.question-action .btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #ff2f5b;
+  border-color: #ff2f5b;
+}
