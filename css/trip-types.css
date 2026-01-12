@@ -332,11 +332,11 @@
 /* ================================
     Boucher section
     ================================= */
-.cta-section {
+.travel-cta {
   background: #fff;
 }
 
-.cta-card {
+.travel-cta .cta-card {
   border-radius: 22px;
   padding: 40px;
   position: relative;
@@ -345,32 +345,32 @@
 }
 
 /* LEFT CARD */
-.cta-left {
+.travel-cta .cta-left {
   background: #fff;
   border: 1px solid #eee;
 }
 
-.cta-left h2 {
+.travel-cta .cta-left h2 {
   font-size: 42px;
   font-weight: 700;
   color: #111;
 }
 
-.cta-left p {
+.travel-cta .cta-left p {
   font-size: 18px;
   color: #555;
   margin: 20px 0 30px;
 }
 
-.cta-person {
+.travel-cta .cta-person {
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 60px;
   height: 130px;
 }
 
 /* Footer bar */
-.cta-footer {
+.travel-cta .cta-footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -380,30 +380,30 @@
   text-align: center;
 }
 
-.cta-footer a {
+.travel-cta .cta-footer a {
   color: white;
   font-weight: 600;
   font-size: 18px;
 }
 
 /* RIGHT CARD */
-.cta-right {
+.travel-cta .cta-right {
   background: #2f6665;
   color: white;
 }
 
-.cta-right h2 {
+.travel-cta .cta-right h2 {
   font-size: 42px;
   font-weight: 700;
 }
 
-.cta-right p {
+.travel-cta .cta-right p {
   margin: 20px 0 30px;
   font-size: 18px;
   max-width: 280px;
 }
 
-.cta-right .badge {
+.travel-cta .badge {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 6px 14px;
@@ -414,7 +414,7 @@
 }
 
 /* BUTTON */
-.cta-btn {
+.travel-cta .cta-btn {
   background: #ff2d55;
   border: none;
   padding: 14px 32px;
@@ -424,7 +424,7 @@
 }
 
 /* PHONE IMAGE */
-.cta-phone {
+.travel-cta .cta-phone {
   position: absolute;
   right: 20px;
   bottom: -10px;
@@ -435,61 +435,53 @@
 
 /* MOBILE */
 @media (max-width: 991px) {
-  .cta-card {
+  .travel-cta .cta-card {
     padding: 30px 15px 90px;
     border-radius: 20px;
   }
 
-  /* Left card mobile */
-  .cta-left {
+  .travel-cta .cta-left {
     text-align: center;
   }
 
-  .cta-left h2 {
+  .travel-cta .cta-left h2 {
     font-size: 30px;
   }
 
-  .cta-left p {
+  .travel-cta .cta-left p {
     font-size: 16px;
   }
 
-  .cta-person {
-    position: absolute;
-    display: block;
+  .travel-cta .cta-person {
     width: 100px;
   }
 
-  .cta-footer {
+  .travel-cta .cta-footer {
     border-radius: 0 0 20px 20px;
     font-size: 16px;
   }
 
-  /* Right card mobile */
-  .cta-right {
+  .travel-cta .cta-right {
     padding-bottom: 90px;
   }
 
-  .cta-right h2 {
+  .travel-cta .cta-right h2 {
     font-size: 30px;
   }
 
-  .cta-right p {
+  .travel-cta .cta-right p {
     font-size: 16px;
     max-width: 230px;
   }
 
-  .cta-phone {
+  .travel-cta .cta-phone {
     right: -200px;
     bottom: -3px;
     height: 330px;
     width: 300px;
-    border-radius: 10px;
   }
 
-  .cta-btn {
-    padding: 14px 10px;
-    font-size: 18px;
-    border-radius: 8px;
+  .travel-cta .cta-btn {
     width: 200px;
     margin-right: 90px;
   }
@@ -670,7 +662,7 @@
     What's included – SECTION
     ================================= */
 .included-section {
-  background-color: #f5f5f5;
+  background-color: #faf8f2;
 }
 .included-section h2 {
   font-size: 32px;
@@ -778,7 +770,7 @@
 
 /* Cards */
 .price-card {
-  background: #f6f6f6;
+  background: #faf8f2;
   padding: 16px 18px;
   border-radius: 10px;
   margin-bottom: 14px;
@@ -877,7 +869,7 @@
 }
 
 .essential-card {
-  background-color: #f7f7f7;
+  background-color: #faf8f2;
   border-radius: 8px;
   padding: 50px 60px;
 }
@@ -924,7 +916,7 @@
     Still have questions? – SECTION
     ================================= */
 .question-card {
-  background-color: #f7f7f7;
+  background-color: #faf8f2;
   border-radius: 10px;
   padding: 60px 20px;
 }
