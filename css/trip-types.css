@@ -204,6 +204,9 @@
   font-size: 18px;
   cursor: pointer;
 }
+.open-gallery {
+  cursor: pointer;
+}
 
 /* BODY */
 .gallery-modal-body {
@@ -222,4 +225,646 @@
   height: 200px;
   object-fit: cover;
   display: block;
+}
+
+/* ================================
+   WHO IS THIS TRIP FOR – SECTION
+================================ */
+/* SECTION TITLE */
+.section-title-who {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* CARD */
+.info-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  height: 100%;
+}
+
+/* TITLE (small text) */
+.info-title {
+  font-size: 21px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* MAIN VALUE */
+.info-value {
+  font-size: 23px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.2;
+}
+
+/* SUB VALUE (icon + text like screenshot) */
+.info-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+}
+
+.info-icon {
+  font-size: 16px;
+  color: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .info-value {
+    font-size: 22px;
+  }
+}
+
+/* ================================
+    TRIP HIGHLIGHTS – SECTION
+    ================================= */
+.highlights-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111;
+}
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.check-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  border: 2px solid #4c7c0f;
+  color: #4c7c0f;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .highlight-item {
+    font-size: 16px;
+  }
+}
+
+/* ================================
+    Boucher section
+    ================================= */
+.cta-section {
+  background: #fff;
+}
+
+.cta-card {
+  border-radius: 22px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* LEFT CARD */
+.cta-left {
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.cta-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+}
+
+.cta-left p {
+  font-size: 18px;
+  color: #555;
+  margin: 20px 0 30px;
+}
+
+.cta-person {
+  position: absolute;
+  right: 0px;
+  bottom: 60px;
+  height: 130px;
+}
+
+/* Footer bar */
+.cta-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #3c1d5a;
+  padding: 20px;
+  text-align: center;
+}
+
+.cta-footer a {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* RIGHT CARD */
+.cta-right {
+  background: #2f6665;
+  color: white;
+}
+
+.cta-right h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.cta-right p {
+  margin: 20px 0 30px;
+  font-size: 18px;
+  max-width: 280px;
+}
+
+.cta-right .badge {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* BUTTON */
+.cta-btn {
+  background: #ff2d55;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 270px;
+}
+
+/* PHONE IMAGE */
+.cta-phone {
+  position: absolute;
+  right: 20px;
+  bottom: -10px;
+  height: 265px;
+  width: 258px;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .cta-card {
+    padding: 30px 15px 90px;
+    border-radius: 20px;
+  }
+
+  /* Left card mobile */
+  .cta-left {
+    text-align: center;
+  }
+
+  .cta-left h2 {
+    font-size: 30px;
+  }
+
+  .cta-left p {
+    font-size: 16px;
+  }
+
+  .cta-person {
+    position: absolute;
+    display: block;
+    width: 100px;
+  }
+
+  .cta-footer {
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+  }
+
+  /* Right card mobile */
+  .cta-right {
+    padding-bottom: 90px;
+  }
+
+  .cta-right h2 {
+    font-size: 30px;
+  }
+
+  .cta-right p {
+    font-size: 16px;
+    max-width: 230px;
+  }
+
+  .cta-phone {
+    right: -200px;
+    bottom: -3px;
+    height: 330px;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  .cta-btn {
+    padding: 14px 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 200px;
+    margin-right: 90px;
+  }
+}
+
+/* ================================
+    Itenary-Section
+    ================================= */
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+#expandAll {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+#expandAll:hover,
+#expandAll:focus {
+  color: #111827;
+  text-decoration: none;
+}
+
+.accordion-btn span {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+.toggle {
+  font-size: 26px;
+  font-weight: 300;
+}
+.accordion-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  text-align: left;
+}
+
+/* Circle */
+.accordion-btn .toggle {
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Horizontal line (always visible) */
+.accordion-btn .toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  right: 4px;
+  height: 1.8px;
+  background-color: #111;
+  transform: translateY(-50%);
+}
+
+/* Vertical line (only for +) */
+.accordion-btn .toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 1.8px;
+  background-color: #111;
+  transform: translateX(-50%);
+}
+
+/* OPEN state → hide vertical line = minus */
+.accordion-btn:not(.collapsed) .toggle::after {
+  display: none;
+}
+
+.accordion-body {
+  padding-bottom: 20px;
+  color: #444;
+}
+.accordion-btn .day-label {
+  font-weight: 550;
+  display: block;
+  font-size: 21px;
+  color: #18181b;
+}
+
+.map-wrapper {
+  top: 20px;
+}
+
+.brochure-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  width: 20rem;
+  margin-left: 40px;
+}
+
+/* Icon */
+.brochure-icon {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* Title */
+.brochure-card h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* List */
+.brochure-list {
+  list-style: disc;
+  padding-left: 0;
+  margin-left: 80px;
+  max-width: 260px;
+  text-align: left;
+}
+
+.brochure-list li {
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* Button */
+.brochure-btn {
+  padding: 10px 28px;
+  min-width: 200px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.brochure-icon img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 16px;
+}
+.itinerary-section .accordion-body {
+  font-size: 18px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+@media (max-width: 991px) {
+  .brochure-card {
+    width: 100%;
+    margin-left: 0;
+  }
+  .brochure-list {
+    margin-left: 100px;
+    max-width: 260px;
+  }
+}
+/* ================================
+    What's included – SECTION
+    ================================= */
+.included-section {
+  background-color: #f5f5f5;
+}
+.included-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Item layout */
+.included-item {
+  align-items: flex-start;
+  gap: 20px;
+}
+/* Vegetarian badge */
+.veg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: 2px solid green;
+  color: green;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.included-item .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.included-item .icon img {
+  width: 40px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.veg-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Content */
+.included-item h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.included-item p {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/*================================
+    Dates & Prices – SECTION
+    ================================= */
+/* Section */
+.dates-prices-section {
+  background: #fff;
+}
+
+.section-title-dates {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Month Tabs */
+.month-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.month-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 130px;
+}
+
+.month-btn span {
+  display: block;
+  font-size: 15px;
+  color: #666;
+}
+
+.month-btn.active {
+  background: #3b1c5a;
+  color: #fff;
+  border-color: #3b1c5a;
+  font-size: 18px;
+}
+
+.month-btn.active span {
+  color: #fff;
+}
+
+/* Cards */
+.price-card {
+  background: #f6f6f6;
+  padding: 16px 18px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+/* Dates */
+.date-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date-separator {
+  margin: 0 6px;
+  color: #999;
+}
+
+/* Availability */
+.availability {
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.spaces-left {
+  display: block;
+}
+
+.pay-monthly {
+  display: inline-block;
+  margin-top: 4px;
+  background: #1ea7fd;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+/* Price */
+.price-box {
+  line-height: 1.2;
+}
+
+.price-amount {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.best-offer {
+  display: inline-block;
+  background: #ff385c;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin: 4px 0;
+}
+
+.deposit-text {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Buttons */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Month content */
+.month-content {
+  display: none;
+}
+
+.month-content.active {
+  display: block;
+}
+
+.no-dates {
+  font-size: 15px;
+  color: #777;
+}
+.custom-button {
+  background-color: #fff !important;
+}
+.custom-button:hover {
+  background-color: #dc3545 !important;
 }

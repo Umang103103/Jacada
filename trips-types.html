@@ -603,7 +603,7 @@
       <div class="row g-2 gallery-inner">
         <!-- MAIN IMAGE -->
         <div class="col-lg-8">
-          <div class="gallery-image large">
+          <div class="gallery-image large open-gallery">
             <img
               src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
               alt="Gallery main"
@@ -616,7 +616,7 @@
           <div class="row g-2 h-100">
             <!-- TOP -->
             <div class="col-12">
-              <div class="gallery-image small position-relative">
+              <div class="gallery-image small position-relative open-gallery">
                 <img
                   src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                   alt="Gallery 2"
@@ -631,7 +631,7 @@
                   >
                     <path
                       d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"
-                    ></path>
+                    />
                   </svg>
                 </button>
               </div>
@@ -639,13 +639,12 @@
 
             <!-- BOTTOM -->
             <div class="col-12">
-              <div class="gallery-image small position-relative">
+              <div class="gallery-image small position-relative open-gallery">
                 <img
                   src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
                   alt="Gallery 3"
                 />
 
-                <!-- VIEW ALL -->
                 <button class="view-all-btn" type="button">
                   View All Photos
                 </button>
@@ -654,25 +653,22 @@
           </div>
         </div>
       </div>
-      <!-- GALLERY MODAL -->
+
+      <!-- MODAL -->
       <div class="gallery-modal" id="galleryModal">
         <div class="gallery-modal-overlay"></div>
 
         <div class="gallery-modal-content">
-          <!-- HEADER -->
           <div class="gallery-modal-header">
             <div class="gallery-title">
               Caribou – Discover the Best of the Rockies – 8 Days
             </div>
-
             <button class="gallery-close" id="closeGallery">&times;</button>
           </div>
 
-          <!-- IMAGES GRID -->
           <div class="gallery-modal-body">
             <div class="container-fluid">
               <div class="row g-3">
-                <!-- Repeat for ALL images -->
                 <div class="col-lg-3 col-md-4 col-sm-6">
                   <div class="modal-image">
                     <img
@@ -696,11 +692,546 @@
                     />
                   </div>
                 </div>
-
-                <!-- add more images here -->
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Who is this trip for Section-->
+    <section class="who-is-this-for container my-5">
+      <h2 class="section-title-who mb-4">Who is this trip for</h2>
+
+      <div class="row g-4">
+        <div class="col-6 col-md-6 col-lg">
+          <div class="info-card">
+            <div class="info-title">Difficulty</div>
+            <div class="info-value">Moderate</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg">
+          <div class="info-card">
+            <div class="info-title">Trip style</div>
+            <div class="info-value">
+              <span>Classic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg">
+          <div class="info-card">
+            <div class="info-title">Activity</div>
+            <div class="info-value">Hiking</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg">
+          <div class="info-card">
+            <div class="info-title">Stay time</div>
+            <div class="info-value">9 days</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg">
+          <div class="info-card">
+            <div class="info-title">Price</div>
+            <div class="info-value">$1359</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Highlight section-->
+    <section class="tour-highlights my-5">
+      <div class="container">
+        <h2 class="highlights-title mb-4">Highlights</h2>
+
+        <div class="highlights-list">
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Experience Kelowna and the Okanagan, famous for its vineyards and
+              scenic views</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Marvel at the turquoise waters of Lake Louise and Moraine Lake
+              (seasonal)</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Hike to the toe of the Athabasca Glacier at the Columbia
+              Icefield</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Cozy up at a rustic wilderness hostel in the heart of the
+              stunning Icefields Parkway</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Discover the majestic summits and picturesque charm of
+              Banff</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Explore the vibrant village and stunning mountains of Whistler, a
+              world-class resort</span
+            >
+          </div>
+
+          <div class="highlight-item">
+            <span class="check-icon">✓</span>
+            <span
+              >Catch a glimpse of Canada’s wildlife — they’re often elusive, but
+              we’ll keep watch!</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Boucher section -->
+    <section class="cta-section my-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- LEFT CARD -->
+          <div class="col-lg-6">
+            <div class="cta-card cta-left h-100">
+              <div class="cta-left-content">
+                <h2>Talk to a travel expert</h2>
+                <p>
+                  Our experts are ready to perfect your trip with personalised
+                  advice on itineraries, transfers, and local tips.
+                </p>
+
+                <a href="#" class="btn btn-primary cta-btn">Email Us</a>
+              </div>
+
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+                class="cta-person"
+              />
+
+              <div class="cta-footer">
+                <a href="tel:02080048886">Call Us: 0208 004 8886</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT CARD -->
+          <div class="col-lg-6">
+            <div class="cta-card cta-right h-100">
+              <div class="cta-right-content">
+                <span class="badge">RECOMMENDED</span>
+                <h2>Free Brochure</h2>
+                <p>
+                  Uncover insider tips, see a packing list and view a detailed
+                  itinerary and accommodation information.
+                </p>
+
+                <a href="#" class="btn btn-primary cta-btn"
+                  >Get your free brochure</a
+                >
+              </div>
+
+              <img src="./images/2nd.jpg" class="cta-phone" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Itneary section-->
+    <section class="itinerary-section my-5">
+      <div class="container">
+        <div class="row">
+          <!-- LEFT COLUMN -->
+          <div class="col-lg-7">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2>Itinerary</h2>
+              <button id="expandAll" class="btn btn-link">Expand All +</button>
+            </div>
+
+            <div class="accordion" id="itinerary">
+              <!-- DAY 1 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day1"
+                  >
+                    <div>
+                      <span class="day-label">Day 1</span>
+                      <span>Welcome to Vancouver!</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Arrive in Vancouver and meet your group. Explore the city or
+                    relax after your journey.
+                  </div>
+                </div>
+              </div>
+
+              <!-- DAY 2 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day2"
+                  >
+                    <div>
+                      <span class="day-label">Day 2</span>
+                      <span>Kelowna to Lake Louise</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day2" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Travel through British Columbia’s wine region before
+                    arriving in Lake Louise.
+                  </div>
+                </div>
+              </div>
+
+              <!-- DAY 3 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day3"
+                  >
+                    <div>
+                      <span class="day-label">Day 3</span>
+                      <span>Lake Louise to Icefields Parkway</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day3" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Visit glaciers and dramatic mountain scenery along the
+                    Icefields Parkway.
+                  </div>
+                </div>
+              </div>
+
+              <!-- DAY 4 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day5"
+                  >
+                    <div>
+                      <span class="day-label">Day 4</span>
+                      <span>Lake Louise to Icefields Parkway</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day4" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Visit glaciers and dramatic mountain scenery along the
+                    Icefields Parkway.
+                  </div>
+                </div>
+              </div>
+
+              <!-- DAY 5 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day5"
+                  >
+                    <div>
+                      <span class="day-label">Day 5</span>
+                      <span>Lake Louise to Icefields Parkway</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day5" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Visit glaciers and dramatic mountain scenery along the
+                    Icefields Parkway.
+                  </div>
+                </div>
+              </div>
+
+              <!-- DAY 6 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <button
+                    class="accordion-btn collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#day6"
+                  >
+                    <div>
+                      <span class="day-label">Day 6</span>
+                      <span>Lake Louise to Icefields Parkway</span>
+                    </div>
+                    <span class="toggle"></span>
+                  </button>
+                </div>
+                <div id="day6" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Visit glaciers and dramatic mountain scenery along the
+                    Icefields Parkway.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="col-lg-5">
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/d/u/0/embed?mid=1wzH3P-nV8xt9bO4P1A9jUq6o3oU"
+                width="100%"
+                height="400"
+                style="border: 0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <div class="brochure-card text-center">
+                <div class="brochure-icon">
+                  <img src="./images/boucher.png" alt="Brochure icon" />
+                </div>
+
+                <h5>Download our Brochure</h5>
+
+                <ul class="brochure-list">
+                  <li>Read about this adventure</li>
+                  <li>Full detailed itinerary</li>
+                  <li>Read offline and more</li>
+                </ul>
+
+                <button class="btn btn-outline-danger brochure-btn">
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--What's included section-->
+    <section class="included-section py-5">
+      <div class="container">
+        <h2 class="mb-5">What's Included</h2>
+
+        <!-- Accommodation -->
+        <div class="included-item d-flex mb-5">
+          <div class="icon">
+            <img src="./images/Accomodation.png" alt="Accommodation icon" />
+          </div>
+          <div class="content">
+            <h4>Accommodation</h4>
+            <p>Dorm Share Hostels (7 Nights)</p>
+          </div>
+        </div>
+
+        <!-- Meals -->
+        <div class="included-item d-flex mb-5">
+          <div class="icon">
+            <img src="./images/meal.png" alt="meals icon" />
+          </div>
+          <div class="content">
+            <h4>Meals</h4>
+            <p class="mb-1">
+              <strong>Breakfasts:</strong> 3, <strong>Lunches:</strong> 0,
+              <strong>Dinners:</strong> 2
+            </p>
+            <p class="text-muted">
+              Vegetarian options are available on all meals throughout the
+              adventure.
+            </p>
+
+            <span class="veg-badge">
+              <img src="./images/vegan.png" alt="Vegetarian" class="veg-icon" />
+              Vegetarian options available
+            </span>
+          </div>
+        </div>
+
+        <!-- Local Guide -->
+        <div class="included-item d-flex mb-5">
+          <div class="icon">
+            <img src="./images/travel-guide.png" alt="Local Guide icon" />
+          </div>
+          <div class="content">
+            <h4>Local Guide</h4>
+            <p class="fw-medium mb-1">Guided</p>
+            <p class="text-muted">
+              This adventure is led by a local guide throughout. The main
+              language of this adventure is English. Please contact us for other
+              languages available.
+            </p>
+          </div>
+        </div>
+
+        <!-- Wifi -->
+        <div class="included-item d-flex">
+          <div class="icon">
+            <img src="./images/wifi.png" alt="Wifi icon" />
+          </div>
+          <div class="content">
+            <h4>Wifi</h4>
+            <p class="text-muted">
+              Wifi is available during the adventure. In some areas and/or
+              accommodation / transport Wifi may be free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dates & Prices Section -->
+    <section class="dates-prices-section py-5">
+      <div class="container">
+        <h2 class="section-title-dates mb-4">Dates & Prices</h2>
+
+        <!-- Month Tabs -->
+        <div class="month-tabs mb-4">
+          <button class="month-btn active" data-month="jun">
+            Jun 2026
+            <span>from £1,538</span>
+          </button>
+          <button class="month-btn" data-month="jul">
+            Jul 2026
+            <span>from £1,538</span>
+          </button>
+          <button class="month-btn" data-month="aug">
+            Aug 2026
+            <span>from £1,538</span>
+          </button>
+          <button class="month-btn" data-month="sep">
+            Sep 2026
+            <span>from £1,538</span>
+          </button>
+        </div>
+
+        <!-- JUN -->
+        <div class="month-content active" id="jun">
+          <div class="price-card">
+            <div class="row align-items-center g-2">
+              <div class="col-lg-3">
+                <span class="date-text">Sat 6 Jun 2026</span>
+                <span class="date-separator">&gt;</span>
+                <span class="date-text">Sat 13 Jun 2026</span>
+              </div>
+
+              <div class="col-lg-2 availability">
+                <span class="spaces-left">6+ spaces of 24 left</span>
+                <span class="pay-monthly">Pay Monthly</span>
+              </div>
+
+              <div class="col-lg-3 price-box">
+                <span class="price-amount">£1,538</span>
+                <span class="best-offer">Best offer</span>
+                <span class="deposit-text"
+                  >Book for £200 today, pay the rest later</span
+                >
+              </div>
+
+              <div class="col-lg-4 text-end">
+                <div class="action-grid">
+                  <button class="btn btn-outline-danger custom-button">
+                    Enquire
+                  </button>
+                  <button class="btn btn-outline-danger custom-button">
+                    Hold Space
+                  </button>
+                  <button class="btn btn-outline-danger custom-button">
+                    Add Flight
+                  </button>
+                  <button class="btn btn-danger">Book Tour</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-card">
+            <div class="row align-items-center g-2">
+              <div class="col-lg-3">
+                <span class="date-text">Sat 20 Jun 2026</span>
+                <span class="date-separator">&gt;</span>
+                <span class="date-text">Sat 27 Jun 2026</span>
+              </div>
+
+              <div class="col-lg-2 availability">
+                <span class="spaces-left">6+ spaces of 24 left</span>
+                <span class="pay-monthly">Pay Monthly</span>
+              </div>
+
+              <div class="col-lg-3 price-box">
+                <span class="price-amount">£1,538</span>
+                <span class="best-offer">Best offer</span>
+                <span class="deposit-text"
+                  >Book for £200 today, pay the rest later</span
+                >
+              </div>
+
+              <div class="col-lg-4 text-end">
+                <div class="action-grid">
+                  <button class="btn btn-outline-danger custom-button">
+                    Enquire
+                  </button>
+                  <button class="btn btn-outline-danger custom-button">
+                    Hold Space
+                  </button>
+                  <button class="btn btn-outline-danger custom-button">
+                    Add Flight
+                  </button>
+                  <button class="btn btn-danger">Book Tour</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTHER MONTHS -->
+        <div class="month-content" id="jul">
+          <p class="no-dates">No July dates yet.</p>
+        </div>
+
+        <div class="month-content" id="aug">
+          <p class="no-dates">No August dates yet.</p>
+        </div>
+
+        <div class="month-content" id="sep">
+          <p class="no-dates">No September dates yet.</p>
         </div>
       </div>
     </section>
