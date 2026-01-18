@@ -177,7 +177,10 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  transition: fill 0.25s ease, stroke 0.25s ease, transform 0.2s ease;
+  transition:
+    fill 0.25s ease,
+    stroke 0.25s ease,
+    transform 0.2s ease;
 }
 
 /* ACTIVE (filled heart) */
@@ -201,6 +204,30 @@
   cursor: pointer;
 }
 
+.mobile-gallery {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mobile-gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.mobile-view-all {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 /* MOBILE */
 @media (max-width: 991px) {
   .gallery-image.large {
@@ -209,6 +236,15 @@
 
   .gallery-image.small {
     height: 180px;
+  }
+  .gallery-inner {
+    display: none;
+  }
+  #mobileGalleryCarousel .carousel-item img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 /*Gallery Modal*/
@@ -256,6 +292,7 @@
 .gallery-title {
   font-size: 20px;
   font-weight: 600;
+  width: 18rem;
 }
 
 .gallery-close {
@@ -682,7 +719,7 @@
   border-radius: 14px;
   background: #fff;
   width: 20rem;
-  margin-left: 40px;
+  margin-left: 100px;
 }
 
 /* Icon */
@@ -730,6 +767,75 @@
   line-height: 1.6;
   padding-left: 0;
 }
+/* Important Section */
+.available-extras {
+  max-width: 900px;
+  margin-left: 50px;
+}
+
+.extras-header {
+  margin-bottom: 30px;
+}
+
+.extras-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.extras-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 6px;
+}
+
+.extra-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.extra-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #c1aa7f;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.extra-content {
+  flex: 1;
+}
+
+.extra-heading {
+  margin-bottom: 10px;
+}
+
+.extra-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.extra-price {
+  font-size: 16px;
+  color: #374151;
+  margin-left: 6px;
+}
+
+.extra-text span {
+  display: block;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
 
 @media (max-width: 991px) {
   .brochure-card {
@@ -739,6 +845,10 @@
   .brochure-list {
     margin-left: 100px;
     max-width: 260px;
+  }
+  .available-extras {
+    margin-top: 24px;
+    margin-left: 0px;
   }
 }
 /* ================================
@@ -942,6 +1052,138 @@
 }
 .custom-button:hover {
   background-color: #dc3545 !important;
+}
+
+/* ===== MOBILE MONTH SWITCHER ===== */
+
+.mobile-month-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav-arrow {
+  width: 46px;
+  height: 46px;
+  background: #c1aa7f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month-display {
+  flex: 1;
+  height: 46px;
+  border: 1.5px solid #c1aa7f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+
+.month-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.calendar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ===== INFORMATION REQUEST MODAL ===== */
+
+#infoRequestModal .modal-content {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Header */
+.info-header {
+  background: #3a3832;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.info-header h6 {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.collapse-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Labels */
+.small-muted {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Inputs */
+#infoRequestModal .form-control {
+  height: 46px;
+  border-radius: 6px;
+  border: 1px solid #e3e3e3;
+  font-size: 14px;
+}
+
+#infoRequestModal textarea.form-control {
+  height: auto;
+}
+
+/* Checkbox */
+#infoRequestModal .form-check-label {
+  font-size: 14px;
+  color: #555;
+}
+
+#infoRequestModal .privacy-link {
+  color: #2b7cff;
+  text-decoration: underline;
+}
+
+/* Send Button */
+.btn-send {
+  background: #d6b97c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-send:hover {
+  background: #d6b97c;
+}
+
+/* Modal spacing */
+#infoRequestModal .modal-body {
+  padding: 30px;
+}
+
+/* Hide desktop tabs on mobile */
+@media (max-width: 991px) {
+  .month-tabs {
+    display: none;
+  }
 }
 
 /* ================================
