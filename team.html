@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacada-Travels</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--Swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/team.css" />
+  </head>
+
+  <body>
+    <!--Topbar Section-->
+    <header>
+      <div class="topbar d-flex align-items-center">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- LEFT: Logo -->
+          <div class="topbar-logo">Jacada</div>
+
+          <!-- RIGHT: Desktop items (visible md and up) -->
+          <div class="d-none d-md-flex align-items-center gap-4 topbar-right">
+            <!-- Currency Selector (desktop only) -->
+            <div class="currency-selector">
+              <button class="currency-btn" type="button" aria-expanded="false">
+                <span class="currency-symbol">$</span>
+                <span class="currency-label">USD</span>
+                <span class="currency-caret" aria-hidden="true"></span>
+              </button>
+
+              <ul class="currency-list">
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">USD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">£</span>
+                  <span class="item-code">GBP</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">AUD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">CAD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">HKD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">SGD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">$</span>
+                  <span class="item-code">NZD</span>
+                </li>
+                <li>
+                  <span class="item-symbol">¥</span>
+                  <span class="item-code">RMB</span>
+                </li>
+                <li>
+                  <span class="item-symbol">€</span>
+                  <span class="item-code">EUR</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CALL US (desktop only) -->
+            <div class="call-us text-end">
+              <div class="call-label">CALL US ON</div>
+              <a href="tel:6468958368" class="call-number">646-895-8368</a>
+            </div>
+          </div>
+          <!-- MOBILE RIGHT SIDE (visible below md) -->
+          <div class="mobile-icons d-flex d-md-none align-items-center">
+            <!-- SEARCH BUTTON (mobile only) -->
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
+
+            <span class="menu-text">MENU</span>
+
+            <!-- HAMBURGER -->
+            <button
+              class="navbar-toggler first-button d-md-none"
+              type="button"
+              aria-label="Toggle navigation"
+            >
+              <div class="animated-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+
+            <nav class="mobile-nav d-md-none" aria-hidden="true">
+              <!-- MAIN MENU -->
+              <div class="menu-panel active" data-panel="main">
+                <ul class="menu-list">
+                  <li>
+                    <button class="panel-link" data-target="destinations">
+                      Destinations <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="luxury-safaris">
+                      Luxury Safaris <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="trip-types">
+                      Trip Types <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="inspiration">
+                      Inspiration <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="positive-impact">
+                      Positive Impact <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="panel-link" data-target="about-us">
+                      About Us <span class="arrow"></span>
+                    </button>
+                  </li>
+
+                  <li><a href="#">Start Planning</a></li>
+                </ul>
+              </div>
+
+              <!-- DESTINATIONS -->
+              <div class="menu-panel" data-panel="destinations">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Africa</a></li>
+                  <li><a href="#">Asia</a></li>
+                  <li><a href="#">Europe</a></li>
+                </ul>
+              </div>
+              <!-- Luxury safaris -->
+              <div class="menu-panel" data-panel="luxury-safaris">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Safari A</a></li>
+                  <li><a href="#">Safari B</a></li>
+                  <li><a href="#">Safari C</a></li>
+                </ul>
+              </div>
+              <!-- TRIP TYPES -->
+              <div class="menu-panel" data-panel="trip-types">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Honeymoon</a></li>
+                  <li><a href="#">Family</a></li>
+                </ul>
+              </div>
+              <!-- INSPIRATION -->
+              <div class="menu-panel" data-panel="inspiration">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Honeymoons</a></li>
+                  <li><a href="#">Family Travel</a></li>
+                  <li><a href="#">Luxury Escapes</a></li>
+                </ul>
+              </div>
+              <!-- POSITIVE IMPACT -->
+              <div class="menu-panel" data-panel="positive-impact">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">Communities</a></li>
+                  <li><a href="#">Conservation</a></li>
+                </ul>
+              </div>
+              <!-- ABOUT US -->
+              <div class="menu-panel" data-panel="about-us">
+                <button class="panel-back">
+                  <span class="back-arrow"></span> Back
+                </button>
+                <ul class="menu-list">
+                  <li><a href="#">Our Story</a></li>
+                  <li><a href="#">Why Jacada</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--Navbar-->
+      <nav id="navbar" class="navigation d-none d-lg-block">
+        <div class="background"></div>
+
+        <div class="container position-relative">
+          <ul class="navbar-nav flex-row" id="menu-header-menu">
+            <!-- DESTINATIONS (WIDE) -->
+            <li class="nav-item wide menu-item-has-children">
+              <a class="nav-link">Destinations</a>
+
+              <ul class="sub-menu">
+                <!-- AFRICA -->
+                <li class="menu-item-has-children">
+                  <a>Africa</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Botswana Safaris</li>
+                    <li>Congo</li>
+                    <li>Kenya</li>
+                    <li>Madagascar</li>
+                    <li>Mauritius</li>
+                    <li>Morocco</li>
+                    <li>Mozambique</li>
+                    <li>Namibia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>South Africa</li>
+                    <li>Tanzania</li>
+                    <li>Uganda</li>
+                    <li>Zambia</li>
+                    <li>Zimbabwe</li>
+                  </ul>
+                </li>
+
+                <!-- ASIA -->
+                <li class="menu-item-has-children">
+                  <a>Asia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+                <!--Australasia-->
+                <li class="menu-item-has-children">
+                  <a>Australasia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Central Asia-->
+                <li class="menu-item-has-children">
+                  <a>Central Asia</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Europe-->
+                <li class="menu-item-has-children">
+                  <a>Europe</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Indian Subcontinent-->
+                <li class="menu-item-has-children">
+                  <a>Indian Subcontinent</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Latin America-->
+                <li class="menu-item-has-children">
+                  <a>Latin America</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Middle East-->
+                <li class="menu-item-has-children">
+                  <a>Middle East</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--Polar-->
+                <li class="menu-item-has-children">
+                  <a>Polar</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+
+                <!--South Pacific-->
+                <li class="menu-item-has-children">
+                  <a>South Pacific</a>
+
+                  <ul class="sub-list">
+                    <li>Grand Tours</li>
+                    <li>Bali</li>
+                    <li>Cambodia</li>
+                    <li>China</li>
+                    <li>Indonesia</li>
+                    <li>Japan</li>
+                    <li>Malaysia</li>
+                  </ul>
+
+                  <ul class="sub-list">
+                    <li>Thailand</li>
+                    <li>Vietnam</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Luxury Safaris</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Trip Types</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Inspiration</a>
+              <ul class="sub-menu">
+                <li><a>Botswana</a></li>
+                <li><a>Kenya</a></li>
+                <li><a>Namibia</a></li>
+                <li><a>South Africa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">Positive Impact</a>
+              <ul class="sub-menu">
+                <li><a>Active & Adventure</a></li>
+                <li><a>Arts & Culture</a></li>
+                <li><a>Family Trips</a></li>
+                <li><a>Honeymoons</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item short menu-item-has-children">
+              <a class="nav-link">About Us</a>
+              <ul class="sub-menu">
+                <li><a>Our Story</a></li>
+                <li><a>Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <button
+              class="btn search-btn d-flex align-items-center"
+              aria-expanded="false"
+              aria-label="Search"
+            >
+              <i class="bi bi-search search-icon"></i>
+              <i class="bi bi-x search-close d-none"></i>
+            </button>
+            <a href="#" class="btn-start-planning"> Start Planning </a>
+          </div>
+        </div>
+      </nav>
+      <!--Search Overlay-->
+      <div
+        class="search-overlay"
+        id="searchOverlay"
+        style="
+          background:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url(&quot;./images/search.jpg&quot;) center / cover no-repeat;
+        "
+      >
+        <div class="search-inner">
+          <div class="search-field">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" placeholder="Search..." autofocus />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HERO  SECTION -->
+    <section class="hero-video-section">
+      <!-- Background Video -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./images/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="container hero-content">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h1 class="hero-title">
+              Exceptional<br />
+              Journeys
+            </h1>
+
+            <p class="hero-subtitle">
+              Set off on remarkable, deeply personal trips planned by
+              award-winning specialists
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--team section-->
+    <section class="team-section">
+      <div class="container py-5">
+        <!-- FILTER BAR -->
+        <div class="row g-3 align-items-center mb-4">
+          <div class="col-md-4">
+            <select id="regionFilter" class="form-select">
+              <option value="all">All teams</option>
+              <option value="africa">Africa</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="latin">Latin America</option>
+              <option value="middle-east">Middle East</option>
+            </select>
+          </div>
+
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="nameSearch"
+              class="form-control"
+              placeholder="Search for a team member..."
+            />
+          </div>
+        </div>
+
+        <!-- TEAM GRID -->
+        <div class="row g-4" id="teamGrid">
+          <!-- CARD -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 team-card"
+            data-region="europe"
+            data-name="alex malcolm"
+          >
+            <div class="team-box">
+              <div class="team-img">
+                <img src="./images/5th.jpg" alt="Alex Malcolm" />
+              </div>
+              <div class="team-role">Founder</div>
+              <div class="team-name">Alex Malcolm</div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 team-card"
+            data-region="asia"
+            data-name="jennifer richt"
+          >
+            <div class="team-box">
+              <div class="team-img">
+                <img src="./images/pemba.jpg" alt="Jennifer Richt" />
+              </div>
+              <div class="team-role">Senior Travel Designer</div>
+              <div class="team-name">Jennifer Richt</div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 team-card"
+            data-region="latin"
+            data-name="lily bunker"
+          >
+            <div class="team-box">
+              <div class="team-img">
+                <img src="./images/lary.jpg" alt="Lily Bunker" />
+              </div>
+              <div class="team-role">Senior Travel Designer</div>
+              <div class="team-name">Lily Bunker</div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 team-card"
+            data-region="asia"
+            data-name="kit wong"
+          >
+            <div class="team-box">
+              <div class="team-img">
+                <img src="./images/alessandro_oddera.jpg" alt="Kit Wong" />
+              </div>
+              <div class="team-role">Senior Travel Designer</div>
+              <div class="team-name">Kit Wong</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CTA Bar-->
+    <div class="mobile-travel-cta" id="mobileTravelCTA">
+      <span class="cta-text">Where would you like to travel?</span>
+      <a href="#" class="cta-btn">Start Planning</a>
+    </div>
+
+    <!--Footer Section-->
+    <footer class="jacada-footer">
+      <div class="container">
+        <!-- TOP FOOTER -->
+        <div class="row gy-5">
+          <!-- NEWSLETTER -->
+          <div class="col-12 col-lg-4">
+            <h6 class="footer-title">
+              Receive Travel Inspiration in your Inbox
+            </h6>
+
+            <form class="footer-form">
+              <input type="text" placeholder="First Name*" />
+              <input type="text" placeholder="Last Name*" />
+              <input type="email" placeholder="Email*" />
+
+              <label class="footer-checkbox">
+                <input type="checkbox" />
+                I am happy to receive emails from Jacada, including travel
+                guides and information.*
+              </label>
+
+              <button type="submit" class="footer-btn">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- AWARDS (PLACEHOLDER) -->
+          <div class="col-12 col-lg-3">
+            <div class="award-wrapper">
+              <div class="award-placeholder">
+                <img src="./images/Footer-logo.png" alt="Award 1" />
+              </div>
+              <div class="award-placeholder">
+                <img src="./images/Footer-logo.png" alt="Award 2" />
+              </div>
+            </div>
+          </div>
+
+          <!-- DESTINATIONS -->
+          <div class="col-12 col-lg-2">
+            <h6 class="footer-title">Destinations</h6>
+            <ul class="footer-links">
+              <li>Africa</li>
+              <li>Asia</li>
+              <li>Australasia</li>
+              <li>Central Asia</li>
+              <li>Europe</li>
+              <li>Indian Subcontinent</li>
+              <li>Latin America</li>
+              <li>Middle East</li>
+              <li>Polar Regions</li>
+              <li>South Pacific</li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="col-12 col-lg-3">
+            <h6 class="footer-title">Get in Touch</h6>
+            <p class="footer-text fw-bold">646-895-8368</p>
+            <p class="footer-text">enquire@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Press Enquiries</h6>
+            <p class="footer-text">press@jacadatravel.com</p>
+
+            <h6 class="footer-title mt-4">Find us on</h6>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <h6 class="footer-title mt-4">Excellent</h6>
+            <div class="trustpilot-stars">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+            <p class="footer-small">based on 2,404 reviews</p>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="footer-divider" />
+
+        <!-- BOTTOM BAR -->
+        <div class="row align-items-center gy-3 footer-bottom">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <span class="footer-logo">Jacada</span>
+          </div>
+
+          <div class="col-12 col-lg-6 text-center text-lg-end footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <span>© Copyright 2010–2025 Jacada Travel</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/team.js"></script>
+  </body>
+</html>

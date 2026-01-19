@@ -1,0 +1,50 @@
+body {
+  background: #fff;
+}
+
+.team-box {
+  background: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.team-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-role {
+  font-size: 14px;
+  color: #c9a56a;
+  margin-bottom: 6px;
+}
+
+.team-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+  .team-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-name {
+    font-size: 20px;
+  }
+}
