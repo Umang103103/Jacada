@@ -37,6 +37,48 @@ body {
   color: #000;
 }
 
+.team-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover .team-box {
+  background-color: #c1aa7f;
+}
+
+.team-card:hover .team-role,
+.team-card:hover .team-name {
+  color: #fff;
+}
+
+.team-img img {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-img img {
+  transform: scale(1.05);
+}
+
+.team-box {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.team-card:hover .team-box {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Desktop only */
+@media (min-width: 992px) {
+  .filter-wrapper {
+    max-width: 680px; /* adjust: 600–750px */
+  }
+}
+
 /* Mobile tweaks */
 @media (max-width: 576px) {
   .team-img {
