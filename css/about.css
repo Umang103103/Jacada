@@ -1,0 +1,299 @@
+/* SECTION */
+.experience-section {
+  background-color: #faf8f3;
+  padding: 100px 20px;
+}
+
+/* TITLE */
+.experience-title {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 36px;
+}
+
+/* INTRO */
+.experience-intro {
+  display: block;
+  font-size: 16px;
+
+  color: #222;
+}
+
+/* BODY TEXT */
+.experience-text {
+  display: block;
+  font-size: 16px;
+
+  color: #222;
+}
+
+/* FOOTER */
+.experience-footer {
+  display: block;
+  font-size: 16px;
+
+  color: #222;
+  margin-top: 10px;
+}
+
+/* LINK */
+.experience-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.experience-wrapper {
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 70px 10px;
+  }
+
+  .experience-title {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+
+  .experience-intro,
+  .experience-text,
+  .experience-footer {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .experience-text {
+    margin-bottom: 30px;
+  }
+}
+
+/*============================
+  Values Section Styles
+=============================*/
+.values-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+/* ICON PLACEHOLDER */
+.value-icon {
+  height: 60px;
+  margin-bottom: 24px;
+}
+
+/* TITLE */
+.value-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.value-text {
+  display: block;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #222;
+  max-width: 260px;
+  margin: 0 auto;
+}
+.value-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .values-section {
+    padding: 70px 15px;
+  }
+
+  .value-text {
+    max-width: 100%;
+  }
+}
+/*============================
+  Difference Section Styles
+=============================*/
+.difference-section {
+  background-color: #f3f3f1;
+  padding: 80px 20px;
+}
+
+/* TITLE */
+.difference-title {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+/* TEXT */
+.difference-text {
+  display: block;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111;
+}
+
+/* BUTTON */
+.difference-btn-wrap {
+  margin-top: 10px;
+}
+
+.difference-btn {
+  display: inline-block;
+  background-color: #c1aa7f;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.difference-btn:hover {
+  background-color: #b39c70;
+  color: #000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .difference-section {
+    padding: 100px 16px;
+  }
+
+  .difference-title {
+    font-size: 32px;
+  }
+
+  .difference-text {
+    font-size: 15px;
+  }
+}
+/*============================
+  Unique-trips Section Styles
+=============================*/
+.unique-trip-section {
+  background-color: #f8f6f2;
+}
+
+/* Image wrapper */
+.illustration-wrapper img {
+  max-width: 100%;
+}
+
+/* Content */
+.content-wrapper {
+  max-width: 520px;
+}
+
+/* Title */
+.unique-section-title {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Paragraph text */
+.section-text {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Button */
+.meet-team-btn {
+  background-color: #c1aa7f;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.meet-team-btn:hover {
+  background-color: #b2996d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+  }
+}
+/*============================
+  Slider Section Styles
+  =============================*/
+
+.experience-slider-section {
+  background-color: #fff;
+}
+
+/* Slide images */
+.experienceSwiper .swiper-slide {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.experienceSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.experienceSwiper .swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+/* Arrow styling */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #c1aa7f;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background-color: #c1aa7f;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
