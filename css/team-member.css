@@ -24,22 +24,22 @@
 }
 
 .founder-avatar img {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .founder-name {
   display: block;
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 600;
   color: #000;
 }
 
 .founder-role {
   display: block;
-  font-size: 14px;
+  font-size: 18px;
   color: #c2a66b;
   margin-top: 4px;
 }
@@ -54,13 +54,59 @@
 /* RIGHT SIDE */
 .founder-image {
   flex: 1;
+  height: 550px;
+
+  overflow: hidden;
 }
 
 .founder-image img {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 6px;
+}
+
+.contact-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 0;
+  background: #ffffff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c1aa7f;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-item .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-item .text {
+  line-height: 1.4;
+}
+.contact-item .text a {
+  color: #c1aa7f;
+  text-decoration: none;
+}
+
+.contact-item .text a:hover {
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */
@@ -72,5 +118,11 @@
 
   .founder-name {
     font-size: 26px;
+  }
+  .founder-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
