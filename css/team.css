@@ -24,7 +24,7 @@
 /* Image block (fixed height, NOT %) */
 .team-img {
   width: 100%;
-  height: 280px; /* 🔥 SAME FOR ALL CARDS */
+  height: 335px;
   overflow: hidden;
 }
 
@@ -71,7 +71,7 @@
   }
 
   .team-img {
-    height: 220px;
+    height: 280px;
   }
 
   .team-name {

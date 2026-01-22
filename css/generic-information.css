@@ -1,0 +1,96 @@
+.checklist-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+  justify-content: center;
+}
+.checklist-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.intro-text {
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.intro-text span {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.checklist-block {
+  margin-bottom: 40px;
+}
+
+.checklist-title {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.checklist-list {
+  padding-left: 18px;
+}
+
+.checklist-list li {
+  margin-bottom: 12px;
+}
+
+.checklist-list span {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+.checklist-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.checklist-list li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+/* Heading with icon */
+.checklist-heading {
+  display: flex;
+  gap: 10px;
+}
+
+.checklist-icon {
+  width: 26px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .checklist-section {
+    padding: 40px 15px;
+  }
+
+  .checklist-title {
+    font-size: 20px;
+  }
+
+  .intro-text span {
+    font-size: 15px;
+  }
+
+  .checklist-list span {
+    font-size: 14px;
+  }
+  .checklist-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
